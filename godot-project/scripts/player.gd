@@ -4,6 +4,9 @@ var mask = "none"
 var batMaskSonar = preload("res://scenes/bat_mask_sonar_area.tscn")
 var maskPropertyNode
 
+func _ready() -> void:
+	$Sprite.play("running")
+
 func _process(delta: float) -> void:
 	
 	# use arrow keys to switch mask, use same arrow key to remove mask

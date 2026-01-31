@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var floor1: ColorRect = $Floor1 # change ColorRect to Sprite2D when we have floor sprites
-@onready var floor2: ColorRect = $Floor2
+@onready var floor1: Sprite2D = $Floor1 # change ColorRect to Sprite2D when we have floor sprites
+@onready var floor2: Sprite2D = $Floor2
 
 @export var buildings: Dictionary # Key is the building sprite, value is the buildings width
 
@@ -15,10 +15,10 @@ func _process(delta: float) -> void:
 	 # Floor Movement
 	floor1.position.x -= 250 * delta
 	floor2.position.x -= 250 * delta
-	if floor1.position.x <= -1920:
-		floor1.position.x = 1920
-	if floor2.position.x <= -1920:
-		floor2.position.x = 1920
+	if floor1.position.x <= -960:
+		floor1.position.x = 2880
+	if floor2.position.x <= -960:
+		floor2.position.x = 2880
 	
 	 # Building Movement
 	buildings_total_width -= 250 * delta
