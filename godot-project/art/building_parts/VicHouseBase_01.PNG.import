@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b11s4l26138dc"
-path="res://.godot/imported/Building_1.png-cfc5b95f6c7216ac767819efbbd9147c.ctex"
+uid="uid://doyir8rvxd6g2"
+path="res://.godot/imported/VicHouseBase_01.PNG-8f3f3e281b33ab903313cd4998b08f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Building_1.png"
-dest_files=["res://.godot/imported/Building_1.png-cfc5b95f6c7216ac767819efbbd9147c.ctex"]
+source_file="res://art/building_parts/VicHouseBase_01.PNG"
+dest_files=["res://.godot/imported/VicHouseBase_01.PNG-8f3f3e281b33ab903313cd4998b08f39.ctex"]
 
 [params]
 
