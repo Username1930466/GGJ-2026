@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Global Game Jam 2026"
-run/main_scene="uid://cso7ts6s32nxy"
+run/main_scene="uid://c8iopjiw4ppso"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://wv0gfh4ysjkj"
 
 [display]
 

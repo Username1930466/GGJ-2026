@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b880hqxko7c5f"]
+
+[ext_resource type="Script" uid="uid://c3r0wn70au1pn" path="res://scripts/bat_mask_sonar_area.gd" id="1_nim73"]
+[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="1_nu866"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nim73"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nu866")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm48e"]
+size = Vector2(921, 139)
+
+[node name="BatMaskSonarArea" type="Area2D" unique_id=1760398575]
+script = ExtResource("1_nim73")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1820122932]
+modulate = Color(1, 1, 1, 0.27450982)
+position = Vector2(459, -1.9073486e-06)
+scale = Vector2(7.171875, 1.109375)
+sprite_frames = SubResource("SpriteFrames_nim73")
+
+[node name="BatMaskSonarCollision" type="CollisionShape2D" parent="." unique_id=1972829928]
+position = Vector2(460.5, -1.5)
+shape = SubResource("RectangleShape2D_fm48e")

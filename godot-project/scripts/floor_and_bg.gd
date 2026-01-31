@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var floor1 = $Floor1
-@onready var floor2 = $Floor2
+@onready var floor1: ColorRect = $Floor1 # change ColorRect to Sprite2D when we have floor sprites
+@onready var floor2: ColorRect = $Floor2
 
 func _process(delta: float) -> void:
 	 # Floor Movement
