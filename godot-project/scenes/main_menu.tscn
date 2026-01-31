@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://nkx1sj115ct8" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cgc2dcf1l65js" path="res://ui_theme/default_theme.tres" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://ddyf8csuoxk31" path="res://art/ui/New_Game_Button.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://bg7g8a5ui3y0o" path="res://art/ui/High_Scores_Button.png" id="4_8ln24"]
+[ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://t525ntvigvco" path="res://art/ui/Quit_Button.png" id="5_rtw2f"]
 
 [node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores", "high_scores_back_button")]
 layout_mode = 3
@@ -13,9 +16,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ekxnf")
 play_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control/PlayButton")
-high_scores_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/HighScoresButton")
-credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/CreditsButton")
-exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/ExitButton")
+high_scores_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control2/HighScoresButton")
+credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control3/CreditsButton")
+exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control4/QuitButton")
 credits = NodePath("Credits")
 credits_back_button = NodePath("Credits/Panel/CreditsBackButton")
 high_scores = NodePath("HighScores")
@@ -64,23 +67,59 @@ texture_normal = ExtResource("3_bqqt6")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="HighScoresButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1975235778]
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=877739381]
+custom_minimum_size = Vector2(100, 136)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("1_l6cm7")
-text = "High Scores"
 
-[node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=939342677]
-layout_mode = 2
+[node name="HighScoresButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/VBoxContainer/Control2" unique_id=782404741]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 size_flags_vertical = 3
 theme = ExtResource("1_l6cm7")
-text = "Credits"
+texture_normal = ExtResource("4_8ln24")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="ExitButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1835960560]
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=2122871757]
+custom_minimum_size = Vector2(100, 136)
 layout_mode = 2
+
+[node name="CreditsButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/VBoxContainer/Control3" unique_id=1585055809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 size_flags_vertical = 3
 theme = ExtResource("1_l6cm7")
-text = "Exit"
+texture_normal = ExtResource("5_oa1go")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Control4" type="Control" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=177687342]
+custom_minimum_size = Vector2(100, 136)
+layout_mode = 2
+
+[node name="QuitButton" type="TextureButton" parent="HBoxContainer/VBoxContainer/VBoxContainer/Control4" unique_id=1846308829]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_vertical = 3
+theme = ExtResource("1_l6cm7")
+texture_normal = ExtResource("5_rtw2f")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Spacer2" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=224625224]
 layout_mode = 2

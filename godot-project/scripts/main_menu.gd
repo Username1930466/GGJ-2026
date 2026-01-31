@@ -2,9 +2,9 @@ extends Control
 
 # Export variables for the menu buttons
 @export var play_button: TextureButton
-@export var high_scores_button: Button
-@export var credits_button: Button
-@export var exit_button: Button
+@export var high_scores_button: TextureButton
+@export var credits_button: TextureButton
+@export var exit_button: TextureButton
 
 # Export variables for the credits panel
 @export var credits: MarginContainer
@@ -14,6 +14,7 @@ extends Control
 @export var high_scores: MarginContainer
 @export var high_scores_back_button: Button
 
+var button_scale_twen:Tween
 
 func _ready() -> void:
 	# Connect all the button pressed signals
@@ -23,6 +24,18 @@ func _ready() -> void:
 	credits_button.pressed.connect(_on_credits_button_pressed)
 	credits_back_button.pressed.connect(_on_credits_back_button_pressed)
 	exit_button.pressed.connect(_on_exit_button_pressed)
+	
+	# Connect Button Mouse Entered
+	play_button.mouse_entered.connect(_on_button_mouse_entered.bind(play_button))
+	high_scores_button.mouse_entered.connect(_on_button_mouse_entered.bind(high_scores_button))
+	credits_button.mouse_entered.connect(_on_button_mouse_entered.bind(credits_button))
+	exit_button.mouse_entered.connect(_on_button_mouse_entered.bind(exit_button))
+
+	# Connect Button Mouse Exited
+	play_button.mouse_exited.connect(_on_button_mouse_exited.bind(play_button))
+	high_scores_button.mouse_exited.connect(_on_button_mouse_exited.bind(high_scores_button))
+	credits_button.mouse_exited.connect(_on_button_mouse_exited.bind(credits_button))
+	exit_button.mouse_exited.connect(_on_button_mouse_exited.bind(exit_button))
 
 # This function runs when play is pressed
 # It loads the scene for Main
@@ -52,13 +65,26 @@ func _on_high_scores_back_button_pressed()-> void:
 	high_scores.visible = false
 
 func start_new_game()-> void:
-	var tween:Tween = create_tween();
-	tween.tween_property(play_button,"scale",Vector2.ONE*0.8,0.4)\
-	.set_ease(Tween.EASE_OUT)\
-	.set_trans(Tween.TRANS_SPRING)
+	#var tween:Tween = create_tween();
+	#tween.tween_property(play_button,"scale",Vector2.ONE*0.8,0.4)\
+	#.set_ease(Tween.EASE_OUT)\
+	#.set_trans(Tween.TRANS_SPRING)
 	
 	#tween.tween_property(play_button,"scale",Vector2.ONE,0.2)\
 	#.set_ease(Tween.EASE_OUT)\
 	#.set_trans(Tween.TRANS_EXPO)
-	await tween.finished
+	#await tween.finished
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
+
+func _on_button_mouse_entered(button:TextureButton)-> void:
+	button_scale_twen = create_tween()
+	button_scale_twen.tween_property(button,"scale",Vector2.ONE*1.1,0.4)\
+	.set_ease(Tween.EASE_OUT)\
+	.set_trans(Tween.TRANS_SPRING)
+	
+
+func _on_button_mouse_exited(button:TextureButton)-> void:
+	button_scale_twen = create_tween()
+	button_scale_twen.tween_property(button,"scale",Vector2.ONE*1,0.4)\
+	.set_ease(Tween.EASE_OUT)\
+	.set_trans(Tween.TRANS_SPRING)
