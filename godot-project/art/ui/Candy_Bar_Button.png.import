@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgiqi71evtare"
-path="res://.godot/imported/Bat_Mask.png-94079ef07f9879b68396aaaaa5c270a6.ctex"
+uid="uid://xlkj0bo4v72r"
+path="res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Bat_Mask.png"
-dest_files=["res://.godot/imported/Bat_Mask.png-94079ef07f9879b68396aaaaa5c270a6.ctex"]
+source_file="res://art/ui/Candy_Bar_Button.png"
+dest_files=["res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"]
 
 [params]
 
