@@ -6,6 +6,7 @@
 radius = 107.11676
 
 [node name="BatSwarm" type="Node2D" unique_id=418203477]
+z_index = 5
 script = ExtResource("1_shifv")
 
 [node name="SwarmArea" type="Area2D" parent="." unique_id=493675271]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2y5fmuviont4"
-path="res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"
+uid="uid://deoob3gyuc1gu"
+path="res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Candy_Bar_Button.png"
-dest_files=["res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"]
+source_file="res://art/ui/NumberOne.png"
+dest_files=["res://.godot/imported/NumberOne.png-4869dda0548fee756d3841f953dba78e.ctex"]
 
 [params]
 
