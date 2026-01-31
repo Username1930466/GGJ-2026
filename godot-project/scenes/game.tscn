@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://cfby2shv3jk1k" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://dh5cvahkhah68" path="res://art/CobbleRoad.PNG" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://m77l7mr0yh54" path="res://scenes/hud.tscn" id="4_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://dcoq6j4skk831" path="res://scenes/bat_swarm.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player")]
 script = ExtResource("1_iywne")
@@ -45,9 +44,6 @@ script = ExtResource("3_lnu2h")
 [node name="ArmyTimer" type="Timer" parent="EnemySpawner" unique_id=1439680860]
 
 [node name="HUD" parent="." unique_id=1606327440 instance=ExtResource("4_lbhrr")]
-
-[node name="BatSwarm" parent="." unique_id=418203477 instance=ExtResource("7_u5sy4")]
-position = Vector2(2371, 275)
 
 [connection signal="timeout" from="EnemySpawner/BatsTimer" to="EnemySpawner" method="_on_bats_timer_timeout"]
 [connection signal="timeout" from="EnemySpawner/RaccoonTimer" to="EnemySpawner" method="_on_raccoon_timer_timeout"]

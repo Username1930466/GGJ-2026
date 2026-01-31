@@ -5,6 +5,11 @@ const raccoon_timer_avg: int = 20 # Raccoon average time between spawns
 const army_timer_avg: int = 60 # Army Inspection average time between spawns
 const t_variation: int = 5 # maximum variation in seconds of the timers
 
+const bat_min_y = 700
+const bat_max_y = 200
+
+@onready var batSwarmScene = preload("res://scenes/bat_swarm.tscn")
+
 func _ready() -> void:
 	reset_timer($BatsTimer)
 	reset_timer($RaccoonTimer)
@@ -22,7 +27,9 @@ func reset_timer(timer):
 	# theres probably a better way to do this but all i can think of is using arrays/dictionarys and i feel like that would be overcomplicating things
 
 func _on_bats_timer_timeout() -> void:
-	print("bat spawn")
+	var batSwarmInstance = batSwarmScene.instantiate()
+	get_parent().add_child(batSwarmInstance)
+	batSwarmInstance.position = Vector2(2500,randf_range(bat_min_y,bat_max_y))
 	reset_timer($BatsTimer)
 
 func _on_raccoon_timer_timeout() -> void:
