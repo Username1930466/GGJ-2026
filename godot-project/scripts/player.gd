@@ -2,15 +2,22 @@ class_name Player extends Node2D
 
 signal player_died
 
+const startingX = 200
+const speedX = 1500
+
 var mask = "none"
 var batMaskSonar = preload("res://scenes/bat_mask_sonar_area.tscn")
+var speedMaskScene = preload("res://scenes/speed_mask_property.tscn")
 var maskPropertyNode
+
+var targetX : float = startingX
 
 func _ready() -> void:
 	$Sprite.play("running")
 
 func _process(delta: float) -> void:
 	$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
+	position.x = lerp(position.x,targetX,0.02)
 	# use arrow keys to switch mask, use same arrow key to remove mask
 	if Input.is_action_just_pressed("Mask1"):
 		if mask == "bat":
@@ -27,6 +34,10 @@ func _process(delta: float) -> void:
 			SwitchMask("none")
 		else:
 			SwitchMask("reveal")
+	
+	if mask == "speed":
+		if Input.is_action_just_pressed("MaskAbility"):
+			$AnimationPlayer.play("dash")
 
 
 func SwitchMask(targetMask):

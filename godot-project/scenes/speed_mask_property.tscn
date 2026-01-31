@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bydjfdn88sf76"]
+
+[ext_resource type="Script" uid="uid://clbiqnr31fknm" path="res://scripts/speed_mask_property.gd" id="1_q65da"]
+
+[node name="SpeedMaskProperty" type="Node2D" unique_id=210607310]
+script = ExtResource("1_q65da")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1632262083]
+wait_time = 5.0
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
