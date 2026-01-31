@@ -2,12 +2,32 @@ extends Node2D
 
 var mask = "none"
 var batMaskSonar = preload("res://scenes/bat_mask_sonar_area.tscn")
+var maskPropertyNode
 
-func _ready() -> void:
-	SwitchMask("bat")
+func _process(delta: float) -> void:
+	
+	# use arrow keys to switch mask, use same arrow key to remove mask
+	if Input.is_action_just_pressed("Mask1"):
+		if mask == "bat":
+			SwitchMask("none")
+		else:
+			SwitchMask("bat")
+	if Input.is_action_just_pressed("Mask2"):
+		if mask == "speed":
+			SwitchMask("none")
+		else:
+			SwitchMask("speed")
+	if Input.is_action_just_pressed("Mask3"):
+		if mask == "reveal":
+			SwitchMask("none")
+		else:
+			SwitchMask("reveal")
+
 
 func SwitchMask(targetMask):
+	ResetMaskProperties(mask)
 	mask = targetMask
+	$DebugLabel.text = mask
 	match mask:
 		
 		"none":
@@ -16,9 +36,26 @@ func SwitchMask(targetMask):
 		"bat":
 			var sonarInstance = batMaskSonar.instantiate()
 			get_node("EyeHeight").add_child(sonarInstance)
+			maskPropertyNode = sonarInstance
 		
 		"speed":
 			pass
 		
 		"reveal":
 			pass
+
+func ResetMaskProperties(targetMask):
+	match targetMask:
+		
+		"none":
+			pass
+		
+		"bat":
+			maskPropertyNode.queue_free()
+		
+		"speed":
+			pass
+		
+		"reveal":
+			pass
+	maskPropertyNode = null

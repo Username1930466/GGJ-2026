@@ -34,3 +34,11 @@ position = Vector2(0, -200)
 [node name="PlayerHitboxCollision" type="CollisionShape2D" parent="PlayerHitboxArea" unique_id=1457380153]
 position = Vector2(0, -136)
 shape = SubResource("RectangleShape2D_qhqgy")
+
+[node name="DebugLabel" type="Label" parent="." unique_id=469023543]
+offset_left = -56.0
+offset_top = -269.0
+offset_right = 57.0
+offset_bottom = -246.0
+text = "Mask Label"
+horizontal_alignment = 1
