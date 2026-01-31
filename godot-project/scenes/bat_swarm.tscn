@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dcoq6j4skk831"]
+
+[ext_resource type="Script" uid="uid://b5uxvliuj6ov6" path="res://scripts/bat_swarm.gd" id="1_shifv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_shifv"]
+radius = 107.11676
+
+[node name="BatSwarm" type="Node2D" unique_id=418203477]
+script = ExtResource("1_shifv")
+
+[node name="BatSwarmArea" type="Area2D" parent="." unique_id=493675271]
+
+[node name="BatSwarmCollision" type="CollisionShape2D" parent="BatSwarmArea" unique_id=1741138370]
+shape = SubResource("CircleShape2D_shifv")
