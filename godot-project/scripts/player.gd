@@ -46,7 +46,7 @@ func SwitchMask(targetMask):
 			var sonarInstance = batMaskSonar.instantiate()
 			get_node("EyeHeight").add_child(sonarInstance)
 			maskPropertyNode = sonarInstance
-		
+					
 		"speed":
 			pass
 		

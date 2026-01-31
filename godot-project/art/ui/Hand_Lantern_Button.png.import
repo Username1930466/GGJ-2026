@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deoob3gyuc1gu"
-path="res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"
+uid="uid://dqumjqaip18qb"
+path="res://.godot/imported/Hand_Lantern_Button.png-5dcbfdc8ba3069b5dd7c4d7f095fd8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Number_One_Button.png"
-dest_files=["res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"]
+source_file="res://art/ui/Hand_Lantern_Button.png"
+dest_files=["res://.godot/imported/Hand_Lantern_Button.png-5dcbfdc8ba3069b5dd7c4d7f095fd8fe.ctex"]
 
 [params]
 

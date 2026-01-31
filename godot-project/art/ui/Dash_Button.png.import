@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deoob3gyuc1gu"
-path="res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"
+uid="uid://ccjwqu61wrw1a"
+path="res://.godot/imported/Dash_Button.png-ac88f6bbe6a86d7f45602268b1021599.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Number_One_Button.png"
-dest_files=["res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"]
+source_file="res://art/ui/Dash_Button.png"
+dest_files=["res://.godot/imported/Dash_Button.png-ac88f6bbe6a86d7f45602268b1021599.ctex"]
 
 [params]
 
