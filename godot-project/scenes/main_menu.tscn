@@ -170,12 +170,17 @@ text = "Back"
 
 [node name="Label" type="Label" parent="Credits/Panel" unique_id=681397927]
 layout_mode = 0
-offset_left = -200.0
-offset_top = 100.0
-offset_right = 768.0
-offset_bottom = 409.0
-scale = Vector2(2.5, 2.5)
-text = "Alvin V ??? - Art
+offset_left = -225.0
+offset_right = 743.0
+offset_bottom = 465.0
+scale = Vector2(2.25, 2.25)
+text = "Game Designed and Developed during Global Game Jam 2026
+Theme: Masks
+Description: Hectic Side-scroller where the Player
+ controls a Plague Doctor navigating Victorian London 
+ puzzling through various obstacles to maximize score
+
+Alvin V ??? - Art
 Ana ??? - Art
 Connor ??? - Audio
 Kesler ??? - Coder
