@@ -19,7 +19,7 @@ func _ready() -> void:
 	# Connect Signals
 	score_changed.connect(hud.update_score)
 	player.player_died.connect(_on_player_died)
-	
+	player.mask_changed.connect(hud._on_mask_changed)
 	
 	is_playing = true
 	

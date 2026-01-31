@@ -25,6 +25,14 @@ ability_4 = NodePath("HUD/AbilityBar/HBoxContainer/Ability4")
 ability_input_4 = NodePath("HUD/AbilityBar/HBoxContainer/AbilityInput4")
 ability_5 = NodePath("HUD/AbilityBar/HBoxContainer/Ability5")
 ability_input_5 = NodePath("HUD/AbilityBar/HBoxContainer/AbilityInput5")
+ability_1_mask_icon = ExtResource("3_6fi6k")
+ability_1_ability_icon = ExtResource("3_uo2fv")
+ability_2_mask_icon = ExtResource("5_5pdws")
+ability_2_ability_icon = ExtResource("3_uo2fv")
+ability_3_mask_icon = ExtResource("7_0i1j5")
+ability_3_ability_icon = ExtResource("3_uo2fv")
+ability_4_mask_icon = ExtResource("9_0m4u7")
+ability_4_ability_icon = ExtResource("3_uo2fv")
 
 [node name="HUD" type="Control" parent="." unique_id=1366648526]
 layout_mode = 3
