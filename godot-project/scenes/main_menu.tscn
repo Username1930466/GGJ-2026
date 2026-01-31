@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://c8iopjiw4ppso"]
+
+[ext_resource type="Script" uid="uid://nkx1sj115ct8" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Theme" uid="uid://cgc2dcf1l65js" path="res://ui_theme/default_theme.tres" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores", "high_scores_back_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+play_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/PlayButton")
+high_scores_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/HighScoresButton")
+credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/CreditsButton")
+exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/ExitButton")
+credits = NodePath("Credits")
+credits_back_button = NodePath("Credits/Panel/CreditsBackButton")
+high_scores = NodePath("HighScores")
+high_scores_back_button = NodePath("HighScores/Panel/HighScoresBackButton")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1881041814]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer1" type="Control" parent="HBoxContainer" unique_id=1824249592]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1600193175]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Spacer1" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1208511989]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1315516644]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="PlayButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1837262765]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_l6cm7")
+text = "Play"
+
+[node name="HighScoresButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1975235778]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_l6cm7")
+text = "High Scores"
+
+[node name="CreditsButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=939342677]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_l6cm7")
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1835960560]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_l6cm7")
+text = "Exit"
+
+[node name="Spacer2" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=224625224]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="Spacer2" type="Control" parent="HBoxContainer" unique_id=1421948530]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Credits" type="MarginContainer" parent="." unique_id=1101862613]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Panel" type="Panel" parent="Credits" unique_id=702274101]
+layout_mode = 2
+
+[node name="CreditsBackButton" type="Button" parent="Credits/Panel" unique_id=1673778136]
+layout_mode = 1
+offset_right = 183.0
+offset_bottom = 80.0
+text = "Back"
+
+[node name="HighScores" type="MarginContainer" parent="." unique_id=2120363292]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Panel" type="Panel" parent="HighScores" unique_id=1151120097]
+layout_mode = 2
+
+[node name="HighScoresBackButton" type="Button" parent="HighScores/Panel" unique_id=2137183927]
+layout_mode = 1
+offset_right = 183.0
+offset_bottom = 80.0
+text = "Back"
