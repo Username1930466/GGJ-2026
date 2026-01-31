@@ -1,18 +1,25 @@
 [gd_scene format=3 uid="uid://de8oicmirkwxx"]
 
-[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="1_uhqni"]
+[ext_resource type="Texture2D" uid="uid://mx1mpheyhrm2" path="res://art/enemy sprites/Bat_01.PNG" id="1_cnldk"]
+[ext_resource type="Texture2D" uid="uid://eqituiehlldw" path="res://art/enemy sprites/Bat_02.PNG" id="2_48wkk"]
+[ext_resource type="Script" uid="uid://dj1tnatxoax0e" path="res://scripts/bat.gd" id="3_48wkk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cnldk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_uhqni")
+"texture": ExtResource("1_cnldk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_48wkk")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [node name="Bat" type="AnimatedSprite2D" unique_id=1279638093]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.04, 0.04)
 sprite_frames = SubResource("SpriteFrames_cnldk")
+autoplay = "default"
+script = ExtResource("3_48wkk")

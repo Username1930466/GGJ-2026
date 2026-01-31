@@ -29,3 +29,6 @@ sprite_frames = SubResource("SpriteFrames_nim73")
 [node name="BatMaskSonarCollision" type="CollisionShape2D" parent="." unique_id=1972829928]
 position = Vector2(460.5, -1.5)
 shape = SubResource("RectangleShape2D_fm48e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
