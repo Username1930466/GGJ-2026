@@ -14,7 +14,7 @@
 script = ExtResource("1_uwrxv")
 buildings = {
 ExtResource("2_iywne"): 635,
-ExtResource("3_u5sy4"): 738
+ExtResource("3_u5sy4"): 890
 }
 
 [node name="Buildings" type="Node2D" parent="Floor & BG" unique_id=1652494301]
