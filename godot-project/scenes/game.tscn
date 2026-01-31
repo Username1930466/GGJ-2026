@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://2k0ewvnnblin"]
 
 [ext_resource type="Script" uid="uid://6kn4gh5shiwg" path="res://scripts/floor_and_bg.gd" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bvcxic5uprkr7" path="res://scenes/player.tscn" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://cfby2shv3jk1k" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
-size = Vector2(108, 236)
 
 [node name="Game" type="Node2D" unique_id=2128105295]
 
@@ -26,16 +23,8 @@ offset_right = 2881.0
 offset_bottom = 1080.0
 color = Color(0.6, 0.6, 0.6, 1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1585680874]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=693455685]
-position = Vector2(192, 760)
-scale = Vector2(1, 2)
-texture = ExtResource("2_yqjtg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1237537422]
-position = Vector2(192, 760)
-shape = SubResource("RectangleShape2D_yqjtg")
+[node name="Player" parent="." unique_id=391822921 instance=ExtResource("2_lbhrr")]
+position = Vector2(194, 819)
 
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=775510795]
 script = ExtResource("3_lnu2h")

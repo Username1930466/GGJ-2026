@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bvcxic5uprkr7"]
+
+[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bpou1ahrl0lit" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://b880hqxko7c5f" path="res://scenes/bat_mask_sonar_area.tscn" id="3_qhqgy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+size = Vector2(113, 264)
+
+[node name="Player" type="Node2D" unique_id=391822921]
+script = ExtResource("1_g2els")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=650881433]
+position = Vector2(0, -138)
+scale = Vector2(1, 2.1875)
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"running"
+
+[node name="PlayerHitboxArea" type="Area2D" parent="." unique_id=1304029476]
+
+[node name="PlayerHitboxCollision" type="CollisionShape2D" parent="PlayerHitboxArea" unique_id=1457380153]
+position = Vector2(0, -136)
+shape = SubResource("RectangleShape2D_qhqgy")
+
+[node name="BatMaskSonarArea" parent="." unique_id=1760398575 instance=ExtResource("3_qhqgy")]
+position = Vector2(-1, -198)
