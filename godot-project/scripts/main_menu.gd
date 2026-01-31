@@ -11,8 +11,19 @@ extends Control
 @export var credits_back_button: Button
 
 # Export variables for the High Scores Panel
-@export var high_scores: MarginContainer
+@export var high_scores_panel: MarginContainer
 @export var high_scores_back_button: Button
+@export var center_container: CenterContainer
+@export var name_label_1: RichTextLabel
+@export var name_label_2: RichTextLabel
+@export var name_label_3: RichTextLabel
+@export var score_label_1: RichTextLabel
+@export var score_label_2: RichTextLabel
+@export var score_label_3: RichTextLabel
+
+var name_labels:Array[RichTextLabel] = []
+var score_labels:Array[RichTextLabel] = []
+
 
 var button_scale_twen:Tween
 
@@ -36,6 +47,11 @@ func _ready() -> void:
 	high_scores_button.mouse_exited.connect(_on_button_mouse_exited.bind(high_scores_button))
 	credits_button.mouse_exited.connect(_on_button_mouse_exited.bind(credits_button))
 	exit_button.mouse_exited.connect(_on_button_mouse_exited.bind(exit_button))
+	
+	# Set highscore labels
+	name_labels = [name_label_1,name_label_2, name_label_3]
+	score_labels = [score_label_1,score_label_2,score_label_3]
+	set_highscore_labels()
 
 # This function runs when play is pressed
 # It loads the scene for Main
@@ -59,10 +75,10 @@ func _on_exit_button_pressed()-> void:
 
 #[TO-DO] Create functionality for highscores
 func _on_high_scores_button_pressed()-> void:
-	high_scores.visible = true
+	high_scores_panel.visible = true
 	
 func _on_high_scores_back_button_pressed()-> void:
-	high_scores.visible = false
+	high_scores_panel.visible = false
 
 func start_new_game()-> void:
 	#var tween:Tween = create_tween();
@@ -75,6 +91,12 @@ func start_new_game()-> void:
 	#.set_trans(Tween.TRANS_EXPO)
 	#await tween.finished
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
+
+func set_highscore_labels()-> void:
+	var high_scores:Array[Dictionary] = Global.high_scores
+	for i in range(high_scores.size()):
+		name_labels[i].text = high_scores[i]["name"]
+		score_labels[i].text = str(high_scores[i]["score"])
 
 func _on_button_mouse_entered(button:TextureButton)-> void:
 	button_scale_twen = create_tween()

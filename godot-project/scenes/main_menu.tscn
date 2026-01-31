@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
 [ext_resource type="Texture2D" uid="uid://t525ntvigvco" path="res://art/ui/Quit_Button.png" id="5_rtw2f"]
 
-[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores", "high_scores_back_button")]
+[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores_panel", "high_scores_back_button", "center_container", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,8 +22,15 @@ credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control3/Cr
 exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control4/QuitButton")
 credits = NodePath("Credits")
 credits_back_button = NodePath("Credits/Panel/CreditsBackButton")
-high_scores = NodePath("HighScores")
+high_scores_panel = NodePath("HighScores")
 high_scores_back_button = NodePath("HighScores/Panel/HighScoresBackButton")
+center_container = NodePath("HighScores/Panel/CenterContainer")
+name_label_1 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel1")
+name_label_2 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel2")
+name_label_3 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel3")
+score_label_1 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel1")
+score_label_2 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel2")
+score_label_3 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel3")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=956483153]
 modulate = Color(0.92, 0.92, 0.92, 0.59607846)
@@ -216,3 +223,70 @@ layout_mode = 1
 offset_right = 183.0
 offset_bottom = 80.0
 text = "Back"
+
+[node name="CenterContainer" type="CenterContainer" parent="HighScores/Panel" unique_id=1231513129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HighScores/Panel/CenterContainer" unique_id=315471468]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer" unique_id=1313682874]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1621827764]
+layout_mode = 2
+
+[node name="NameLabel1" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1242198454]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameLabel2" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=187526414]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameLabel3" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=592670263]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Control" type="Control" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=2067004456]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1820054992]
+layout_mode = 2
+
+[node name="ScoreLabel1" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1373171512]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreLabel2" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1809718086]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreLabel3" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1489284262]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0
