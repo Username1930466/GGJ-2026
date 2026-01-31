@@ -8,7 +8,7 @@
 script = ExtResource("1_0wfyh")
 
 [node name="Skybox01" type="Sprite2D" parent="." unique_id=974343084]
-position = Vector2(959.99994, 274.00003)
+position = Vector2(959.99994, 319)
 scale = Vector2(0.938, 0.528)
 texture = ExtResource("2_sugp2")
 
