@@ -5,6 +5,7 @@ signal mask_changed(mask:String)
 
 var mask = "none"
 var batMaskSonar = preload("res://scenes/bat_mask_sonar_area.tscn")
+var candy_bar_scene:PackedScene = preload("res://scenes/candy_bar.tscn")
 var maskPropertyNode
 
 func _ready() -> void:
@@ -28,9 +29,13 @@ func _process(_delta: float) -> void:
 			SwitchMask("none")
 		else:
 			SwitchMask("reveal")
+	if Input.is_action_just_pressed("CandyBar"):
+		var candy_bar:CandyBar = candy_bar_scene.instantiate()
+		candy_bar.position = position - Vector2(0,150)
+		get_parent().add_child(candy_bar)
 
 func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://scenes/main_menu.tscn")
 
 func SwitchMask(targetMask):
 	ResetMaskProperties(mask)

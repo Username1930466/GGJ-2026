@@ -19,7 +19,6 @@ func _ready() -> void:
 	$BatsTimer.start()
 	$RaccoonTimer.start()
 	$ArmyTimer.start()
-	_on_army_timer_timeout.call_deferred()
 
 func reset_timer(timer):
 	match timer.name:

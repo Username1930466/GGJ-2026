@@ -6,8 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xx78p"]
 size = Vector2(128, 896)
 
-[node name="Racoon" type="Node2D" unique_id=688082479]
+[node name="Racoon" type="Node2D" unique_id=688082479 node_paths=PackedStringArray("area_2d")]
 script = ExtResource("1_ruweg")
+area_2d = NodePath("Area2D")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=350424208]
 
