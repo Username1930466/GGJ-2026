@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dnutliupsypom"
+path="res://.godot/imported/Dash Whoosh.wav-2a2b91a9a5f4846f6551dd2f13ffe6bb.sample"
+
+[deps]
+
+source_file="res://audio/Dash Whoosh.wav"
+dest_files=["res://.godot/imported/Dash Whoosh.wav-2a2b91a9a5f4846f6551dd2f13ffe6bb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
