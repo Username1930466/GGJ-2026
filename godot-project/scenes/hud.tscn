@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bel8u6461boh4" path="res://art/ui/Number_Two_Button.png" id="6_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://cybacq8qfsq7n" path="res://art/ui/Revealing_Mask_Button.png" id="7_0i1j5"]
 [ext_resource type="Texture2D" uid="uid://2lfmisdvf4kl" path="res://art/ui/Number_Three_Button.png" id="8_mphia"]
-[ext_resource type="Texture2D" uid="uid://xlkj0bo4v72r" path="res://art/ui/Candy_Bar_Button.png" id="9_0m4u7"]
+[ext_resource type="Texture2D" uid="uid://2y5fmuviont4" path="res://art/ui/Candy_Bar_Button.png" id="9_0m4u7"]
 [ext_resource type="Texture2D" uid="uid://sy6avglu6m23" path="res://art/ui/Number_Four_Button.png" id="10_apjy4"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1606327440 node_paths=PackedStringArray("score_value", "ability_1", "ability_input_1", "ability_2", "ability_input_2", "ability_3", "ability_input_3", "ability_4", "ability_input_4", "ability_5", "ability_input_5")]
