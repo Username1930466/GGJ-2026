@@ -8,7 +8,7 @@ radius = 107.11676
 [node name="BatSwarm" type="Node2D" unique_id=418203477]
 script = ExtResource("1_shifv")
 
-[node name="BatSwarmArea" type="Area2D" parent="." unique_id=493675271]
+[node name="SwarmArea" type="Area2D" parent="." unique_id=493675271]
 
-[node name="BatSwarmCollision" type="CollisionShape2D" parent="BatSwarmArea" unique_id=1741138370]
+[node name="SwarmCollision" type="CollisionShape2D" parent="SwarmArea" unique_id=1741138370]
 shape = SubResource("CircleShape2D_shifv")

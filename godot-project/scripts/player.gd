@@ -8,15 +8,9 @@ var maskPropertyNode
 
 func _ready() -> void:
 	$Sprite.play("running")
-	
-	# Below was added by jarren to test player death signal
-	#var tween:Tween = create_tween()
-	#tween.tween_interval(randf_range(1,3))
-	#await tween.finished
-	#player_died.emit()
 
-func _process(_delta: float) -> void:
-	
+func _process(delta: float) -> void:
+	$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
 	# use arrow keys to switch mask, use same arrow key to remove mask
 	if Input.is_action_just_pressed("Mask1"):
 		if mask == "bat":

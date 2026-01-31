@@ -33,7 +33,7 @@ scale = Vector2(0.938, 0.938)
 texture = ExtResource("3_p57ef")
 
 [node name="Player" parent="." unique_id=391822921 instance=ExtResource("2_lbhrr")]
-position = Vector2(194, 982)
+position = Vector2(199, 909)
 
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=775510795]
 script = ExtResource("3_lnu2h")

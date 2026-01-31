@@ -175,6 +175,28 @@ offset_right = 183.0
 offset_bottom = 80.0
 text = "Back"
 
+[node name="Label" type="Label" parent="Credits/Panel" unique_id=681397927]
+layout_mode = 0
+offset_left = -200.0
+offset_top = 100.0
+offset_right = 768.0
+offset_bottom = 409.0
+scale = Vector2(2.5, 2.5)
+text = "Alvin V ??? - Art
+Ana ??? - Art
+Connor ??? - Audio
+Kesler ??? - Coder
+Jake ??? - Audio
+Jerren ??? - Coder
+Fory Schavey - Producer / Design
+Raiden Schavey - Coder
+
+Various LLMs were used to speed up the creative process, 
+however, all final products represent original ideas and executions.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HighScores" type="MarginContainer" parent="." unique_id=2120363292]
 visible = false
 layout_mode = 1
