@@ -6,13 +6,13 @@ extends Node2D
 @onready var floor4: Sprite2D = $Floor4
 @onready var floor5: Sprite2D = $Floor5
 
-@export var buildings: Dictionary # Key is the building sprite, value is the buildings width
-
 var buildings_total_width: int = 0
+var building_scene = preload("res://scenes/building.tscn")
 
 func _ready() -> void:
 	while buildings_total_width <= 1920:
 		create_building(randi_range(1, 1))
+	pass
 
 func _process(delta: float) -> void:
 	 # Floor Movement
@@ -38,15 +38,12 @@ func _process(delta: float) -> void:
 			create_building(randi_range(1, 1))
 	for building in $Buildings.get_children():
 		building.position.x -= 250 * delta
-		if building.position.x <= -(buildings[building.texture])/2:
+		if building.position.x <= -1050/2:
 			building.queue_free()
 
 func create_building(building_id):
-	var sprite = buildings.keys()[building_id]
-	var width = buildings.values()[building_id]
-	var building = Sprite2D.new()
-	building.texture = sprite
+	var building = building_scene.instantiate()
 	building.scale = Vector2(0.5, 0.5)
-	building.position = Vector2(buildings_total_width + width/2, 500)
-	buildings_total_width += width
+	building.position = Vector2(buildings_total_width + 1050/2, 500)
+	buildings_total_width += 1050
 	$Buildings.add_child(building)

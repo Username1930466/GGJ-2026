@@ -9,7 +9,7 @@ var maskPropertyNode
 func _ready() -> void:
 	$Sprite.play("running")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
 	# use arrow keys to switch mask, use same arrow key to remove mask
 	if Input.is_action_just_pressed("Mask1"):

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cdpkcx2qeh1vh"]
+
+[ext_resource type="Script" uid="uid://de6la0uunxycm" path="res://scripts/building.gd" id="1_nge4r"]
+[ext_resource type="Texture2D" uid="uid://doyir8rvxd6g2" path="res://art/building_parts/VicHouseBase_01.PNG" id="1_pjx8g"]
+[ext_resource type="Texture2D" uid="uid://c61xqd3gkpw0n" path="res://art/building_parts/LowWindowLight_01.PNG" id="2_nge4r"]
+[ext_resource type="Texture2D" uid="uid://h5ki0vaa1m7e" path="res://art/building_parts/LowWindowLight_02.PNG" id="3_s0gur"]
+[ext_resource type="Texture2D" uid="uid://b8p0dter3p8n7" path="res://art/building_parts/LowWindowNoLight_01.PNG" id="4_fl114"]
+[ext_resource type="Texture2D" uid="uid://c61qfkphjbvmg" path="res://art/building_parts/LowWindowNoLight_02.PNG" id="5_rjisg"]
+[ext_resource type="Texture2D" uid="uid://cdlgycuq50kyh" path="res://art/building_parts/MidWindowLight_01.PNG" id="6_cv530"]
+[ext_resource type="Texture2D" uid="uid://dfqskv712pl5a" path="res://art/building_parts/MidWindowLight_02.PNG" id="7_07lgt"]
+[ext_resource type="Texture2D" uid="uid://cnnqr1nltu18v" path="res://art/building_parts/MidWindowLight_03.PNG" id="8_bgm4y"]
+[ext_resource type="Texture2D" uid="uid://b8pllensiboal" path="res://art/building_parts/MidWindowNoLight_01.PNG" id="9_lx6d4"]
+[ext_resource type="Texture2D" uid="uid://c7o8qatoxp0kl" path="res://art/building_parts/MidWindowNoLight_02.PNG" id="10_as1ia"]
+[ext_resource type="Texture2D" uid="uid://dtc8hyauc2i8t" path="res://art/building_parts/MidWindowNoLight_03.PNG" id="11_mhtd8"]
+[ext_resource type="Texture2D" uid="uid://wpnbin8skge6" path="res://art/building_parts/TopWindow_01.PNG" id="12_k64x0"]
+[ext_resource type="Texture2D" uid="uid://cleupha835fsx" path="res://art/building_parts/TopWindowLight_01.PNG" id="13_vs5tt"]
+[ext_resource type="Texture2D" uid="uid://c3s07af00xh55" path="res://art/building_parts/TopWindowNoLight_01.PNG" id="14_ll25w"]
+[ext_resource type="Texture2D" uid="uid://ctnaowy6m8md4" path="res://art/building_parts/TopWindow_02.PNG" id="15_2f2c6"]
+[ext_resource type="Texture2D" uid="uid://1x78txcdlkwa" path="res://art/building_parts/TopWindowLight_02.PNG" id="16_rh2sc"]
+[ext_resource type="Texture2D" uid="uid://bl30n2prn0aqm" path="res://art/building_parts/TopWindowNoLight_02.PNG" id="17_dc40y"]
+
+[node name="Building" type="Node2D" unique_id=142050957]
+script = ExtResource("1_nge4r")
+
+[node name="VicHouseBase01" type="Sprite2D" parent="." unique_id=1269041906]
+texture = ExtResource("1_pjx8g")
+
+[node name="LowWindowLight01" type="Sprite2D" parent="." unique_id=1323144280]
+texture = ExtResource("2_nge4r")
+
+[node name="LowWindowLight02" type="Sprite2D" parent="." unique_id=771762713]
+texture = ExtResource("3_s0gur")
+
+[node name="LowWindowNoLight01" type="Sprite2D" parent="." unique_id=1988199394]
+texture = ExtResource("4_fl114")
+
+[node name="LowWindowNoLight02" type="Sprite2D" parent="." unique_id=1992618617]
+texture = ExtResource("5_rjisg")
+
+[node name="MidWindowLight01" type="Sprite2D" parent="." unique_id=88109612]
+texture = ExtResource("6_cv530")
+
+[node name="MidWindowLight02" type="Sprite2D" parent="." unique_id=1003076943]
+texture = ExtResource("7_07lgt")
+
+[node name="MidWindowLight03" type="Sprite2D" parent="." unique_id=619400225]
+texture = ExtResource("8_bgm4y")
+
+[node name="MidWindowNoLight01" type="Sprite2D" parent="." unique_id=1252265423]
+texture = ExtResource("9_lx6d4")
+
+[node name="MidWindowNoLight02" type="Sprite2D" parent="." unique_id=1421944076]
+texture = ExtResource("10_as1ia")
+
+[node name="MidWindowNoLight03" type="Sprite2D" parent="." unique_id=633891776]
+texture = ExtResource("11_mhtd8")
+
+[node name="TopWindow01" type="Sprite2D" parent="." unique_id=628300358]
+texture = ExtResource("12_k64x0")
+
+[node name="TopWindowLight01" type="Sprite2D" parent="TopWindow01" unique_id=266169550]
+texture = ExtResource("13_vs5tt")
+
+[node name="TopWindowNoLight01" type="Sprite2D" parent="TopWindow01" unique_id=2042912363]
+texture = ExtResource("14_ll25w")
+
+[node name="TopWindow02" type="Sprite2D" parent="." unique_id=1776362938]
+texture = ExtResource("15_2f2c6")
+
+[node name="TopWindowLight02" type="Sprite2D" parent="TopWindow02" unique_id=292849669]
+texture = ExtResource("16_rh2sc")
+
+[node name="TopWindowNoLight02" type="Sprite2D" parent="TopWindow02" unique_id=1614363524]
+texture = ExtResource("17_dc40y")

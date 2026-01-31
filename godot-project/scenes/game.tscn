@@ -1,26 +1,19 @@
 [gd_scene format=3 uid="uid://2k0ewvnnblin"]
 
-[ext_resource type="Script" uid="uid://ctrjvfa8tfj3w" path="res://scripts/game.gd" id="1_iywne"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://6kn4gh5shiwg" path="res://scripts/floor_and_bg.gd" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://b11s4l26138dc" path="res://art/Building_1.png" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bvcxic5uprkr7" path="res://scenes/player.tscn" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://cfby2shv3jk1k" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://dh5cvahkhah68" path="res://art/CobbleRoad.PNG" id="3_p57ef"]
-[ext_resource type="Texture2D" uid="uid://dmd3wo5dtrpql" path="res://art/VicHouse_01.PNG" id="3_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://m77l7mr0yh54" path="res://scenes/hud.tscn" id="4_lbhrr"]
 
-[node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player", "input_controller")]
+[node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player")]
 script = ExtResource("1_iywne")
 hud = NodePath("HUD")
 player = NodePath("Player")
-input_controller = NodePath("")
 
 [node name="Floor & BG" type="Node2D" parent="." unique_id=873563678]
 script = ExtResource("1_uwrxv")
-buildings = {
-ExtResource("2_iywne"): 635,
-ExtResource("3_u5sy4"): 890
-}
 
 [node name="Buildings" type="Node2D" parent="Floor & BG" unique_id=1652494301]
 
