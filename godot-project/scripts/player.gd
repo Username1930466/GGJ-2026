@@ -1,4 +1,6 @@
-extends Node2D
+class_name Player extends Node2D
+
+signal player_died
 
 var mask = "none"
 var batMaskSonar = preload("res://scenes/bat_mask_sonar_area.tscn")
