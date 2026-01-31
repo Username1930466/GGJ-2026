@@ -26,6 +26,9 @@ enum ABILITY{
 var currently_active:ABILITY
 
 func _ready() -> void:
+	
+	Global.ability_bar = get_node("HUD/AbilityBar")
+	
 	# Connect Signals
 	pass
 	

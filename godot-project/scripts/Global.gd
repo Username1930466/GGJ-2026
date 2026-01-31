@@ -5,3 +5,5 @@ var game: Node2D
 
 # Stores the high scores
 var high_scores:Array[Dictionary] = [{"name":"Empty", "score":0},{"name":"Empty", "score":0},{"name":"Empty", "score":0}]
+
+var ability_bar = null
