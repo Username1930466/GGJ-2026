@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nkx1sj115ct8" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cgc2dcf1l65js" path="res://ui_theme/default_theme.tres" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://c8qsvsg7pnr8f" path="res://art/ui/map.jpg" id="2_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dp73t0uha54ny" path="res://art/ui/menu_bg.jpg" id="2_oa1go"]
 [ext_resource type="Texture2D" uid="uid://ddyf8csuoxk31" path="res://art/ui/New_Game_Button.png" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bg7g8a5ui3y0o" path="res://art/ui/High_Scores_Button.png" id="4_8ln24"]
 [ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
@@ -38,12 +38,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -557.0
-offset_right = 5.0
-offset_bottom = 283.0
+offset_left = -90.0
+offset_top = -472.0
+offset_right = -85.0
+offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.088367, 1.088367)
 texture = ExtResource("2_oa1go")
+expand_mode = 2
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1881041814]

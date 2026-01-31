@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dh8qlonkcflm1"]
+
+[ext_resource type="Texture2D" uid="uid://cjg6v0n4n1h6k" path="res://art/Alley_02.PNG" id="1_knqwg"]
+
+[node name="Alley" type="Node2D" unique_id=1900122027]
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=53606351]
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("1_knqwg")
