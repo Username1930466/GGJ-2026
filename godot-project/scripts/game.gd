@@ -4,6 +4,7 @@ signal score_changed(value:int)
 
 @export var hud: HUD
 @export var player: Player
+@export var input_controller: InputController
 
 
 var is_playing:bool = false
@@ -22,8 +23,26 @@ func _ready() -> void:
 	
 	is_playing = true
 	
+	#Connect signals for Input Controller / Hud
+	
+	#Might not need this code if we connect directly to player! Or could just be used for the control indicator
+	
+	#input_controller.mask1_pressed.connect(hud._on_ability_button_pressed.bind(HUD.ABILITY.MASK1))
+	#input_controller.mask2_pressed.connect(hud._on_ability_button_pressed.bind(HUD.ABILITY.MASK2))
+	#input_controller.mask3_pressed.connect(hud._on_ability_button_pressed.bind(HUD.ABILITY.MASK3))
+	#input_controller.candy_bar_pressed.connect(hud._on_ability_button_pressed.bind(HUD.ABILITY.CANDY_BAR))
+	#input_controller.no_mask_pressed.connect(hud._on_ability_button_pressed.bind(HUD.ABILITY.NO_MASK))
+	#
+	#input_controller.mask1_released.connect(hud._on_ability_button_released.bind(HUD.ABILITY.MASK1))
+	#input_controller.mask2_released.connect(hud._on_ability_button_released.bind(HUD.ABILITY.MASK2))
+	#input_controller.mask3_released.connect(hud._on_ability_button_released.bind(HUD.ABILITY.MASK3))
+	#input_controller.candy_bar_released.connect(hud._on_ability_button_released.bind(HUD.ABILITY.CANDY_BAR))
+	#input_controller.no_mask_released.connect(hud._on_ability_button_released.bind(HUD.ABILITY.NO_MASK))
+	
+	
+	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_playing:
 		current_score += 1
 

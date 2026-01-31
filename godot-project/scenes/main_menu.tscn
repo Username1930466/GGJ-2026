@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
 [ext_resource type="Texture2D" uid="uid://t525ntvigvco" path="res://art/ui/Quit_Button.png" id="5_rtw2f"]
 
-[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores", "high_scores_back_button", "center_container", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
+[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores_panel", "high_scores_back_button", "center_container", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control3/Cr
 exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control4/QuitButton")
 credits = NodePath("Credits")
 credits_back_button = NodePath("Credits/Panel/CreditsBackButton")
-high_scores = NodePath("HighScores")
+high_scores_panel = NodePath("HighScores")
 high_scores_back_button = NodePath("HighScores/Panel/HighScoresBackButton")
 center_container = NodePath("HighScores/Panel/CenterContainer")
 name_label_1 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel1")

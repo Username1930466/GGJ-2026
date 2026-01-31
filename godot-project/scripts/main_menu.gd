@@ -11,7 +11,7 @@ extends Control
 @export var credits_back_button: Button
 
 # Export variables for the High Scores Panel
-@export var high_scores: MarginContainer
+@export var high_scores_panel: MarginContainer
 @export var high_scores_back_button: Button
 @export var center_container: CenterContainer
 @export var name_label_1: RichTextLabel
@@ -75,10 +75,10 @@ func _on_exit_button_pressed()-> void:
 
 #[TO-DO] Create functionality for highscores
 func _on_high_scores_button_pressed()-> void:
-	high_scores.visible = true
+	high_scores_panel.visible = true
 	
 func _on_high_scores_back_button_pressed()-> void:
-	high_scores.visible = false
+	high_scores_panel.visible = false
 
 func start_new_game()-> void:
 	#var tween:Tween = create_tween();

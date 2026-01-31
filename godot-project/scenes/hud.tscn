@@ -91,7 +91,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="Ability2" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1575686364]
-modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -100,7 +99,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="AbilityInput2" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1766822016]
-modulate = Color(0, 0, 0.9490196, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -109,7 +107,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="Ability3" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1502215859]
-modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -118,7 +115,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="AbilityInput3" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1350119619]
-modulate = Color(0, 0, 0.9490196, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -127,7 +123,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="Ability4" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=439423654]
-modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -136,7 +131,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="AbilityInput4" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=616858860]
-modulate = Color(0, 0, 0.9490196, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -145,7 +139,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="Ability5" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=548927155]
-modulate = Color(1, 0, 0, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -154,7 +147,6 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="AbilityInput5" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1504390740]
-modulate = Color(0, 0, 0.9490196, 1)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4

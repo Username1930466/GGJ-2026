@@ -8,10 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://dh5cvahkhah68" path="res://art/CobbleRoad.PNG" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://m77l7mr0yh54" path="res://scenes/hud.tscn" id="4_lbhrr"]
 
-[node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player")]
+[node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player", "input_controller")]
 script = ExtResource("1_iywne")
 hud = NodePath("HUD")
 player = NodePath("Player")
+input_controller = NodePath("")
 
 [node name="Floor & BG" type="Node2D" parent="." unique_id=873563678]
 script = ExtResource("1_uwrxv")
