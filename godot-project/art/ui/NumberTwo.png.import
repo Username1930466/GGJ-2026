@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcswq32yygooq"
-path="res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"
+uid="uid://bel8u6461boh4"
+path="res://.godot/imported/NumberTwo.png-54b99295e497df73dc0ff642fa825dc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Number_One_Button.png"
-dest_files=["res://.godot/imported/Number_One_Button.png-23e18c567a3209fdd379ed0a298ac7c1.ctex"]
+source_file="res://art/ui/NumberTwo.png"
+dest_files=["res://.godot/imported/NumberTwo.png-54b99295e497df73dc0ff642fa825dc4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk7xx2qieb7fa"
-path="res://.godot/imported/Speed_Mask_Button.png-40c824e8ccb1df1fa6abe567b4a2260d.ctex"
+uid="uid://dcswq32yygooq"
+path="res://.godot/imported/NumberOne.png-4869dda0548fee756d3841f953dba78e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Speed_Mask_Button.png"
-dest_files=["res://.godot/imported/Speed_Mask_Button.png-40c824e8ccb1df1fa6abe567b4a2260d.ctex"]
+source_file="res://art/ui/NumberOne.png"
+dest_files=["res://.godot/imported/NumberOne.png-4869dda0548fee756d3841f953dba78e.ctex"]
 
 [params]
 
