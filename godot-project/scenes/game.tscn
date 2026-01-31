@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://2k0ewvnnblin"]
+
+[ext_resource type="Script" uid="uid://6kn4gh5shiwg" path="res://scripts/floor_and_bg.gd" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=2128105295]
+
+[node name="Floor & BG" type="Node2D" parent="." unique_id=873563678]
+script = ExtResource("1_uwrxv")
+
+[node name="Floor1" type="ColorRect" parent="Floor & BG" unique_id=381553788]
+offset_left = -961.0
+offset_top = 756.0
+offset_right = 961.0
+offset_bottom = 1080.0
+color = Color(0.5, 0.5, 0.5, 1)
+
+[node name="Floor2" type="ColorRect" parent="Floor & BG" unique_id=1528569590]
+offset_left = 959.0
+offset_top = 756.0
+offset_right = 2881.0
+offset_bottom = 1080.0
+color = Color(0.6, 0.6, 0.6, 1)
