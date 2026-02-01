@@ -54,17 +54,30 @@ func _process(delta: float) -> void:
 		match last_building:
 			1:
 				building1.position = Vector2(2273, 505)
-				buildings_total_width = 2626
 				last_building = 2
 			2:
 				building2.position = Vector2(2273, 505)
-				buildings_total_width = 2626
 				last_building = 3
 			3:
 				building3.position = Vector2(2273, 505)
-				buildings_total_width = 2626
 				last_building = 4
 			4:
 				building4.position = Vector2(2273, 505)
-				buildings_total_width = 2626
 				last_building = 1
+		buildings_total_width = 2626
+		buildings_till_alley -= 1
+		 # Spawn Alley
+		if buildings_till_alley == 0:
+			var alley = alley_scene.instantiate()
+			alley.position = Vector2(0, 644)
+			buildings_total_width += 140
+			alley.z_index = 1
+			$Alley.add_child(alley)
+			$Alley.position.x = 2719
+			buildings_till_alley = randi_range(5, 7)
+	 # Alley Movement
+	$Alley.position.x -= 250 * delta
+	$Alley.position.x = round($Alley.position.x)
+	if $Alley.position.x <= -266:
+		for child in $Alley.get_children():
+			child.queue_free()

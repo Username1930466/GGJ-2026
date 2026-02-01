@@ -60,6 +60,8 @@ position = Vector2(3888, 648)
 scale = Vector2(0.422, 0.422)
 texture = ExtResource("3_p57ef")
 
+[node name="Alley" type="Node2D" parent="Floor & BG" unique_id=421844141]
+
 [node name="Player" parent="." unique_id=391822921 instance=ExtResource("2_lbhrr")]
 position = Vector2(199, 909)
 
