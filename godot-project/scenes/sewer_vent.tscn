@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cc62464l0hiu2"]
+
+[ext_resource type="Texture2D" uid="uid://cpeqqd1kjh30a" path="res://art/enemy sprites/Tunnel_01.PNG" id="1_7j0kh"]
+[ext_resource type="Script" uid="uid://b64h3n3dsxbhb" path="res://scripts/sewer_vent.gd" id="1_w84go"]
+[ext_resource type="Texture2D" uid="uid://bkqh7yi4u6w2n" path="res://art/enemy sprites/Tunnel_02.PNG" id="2_w84go"]
+
+[sub_resource type="Animation" id="Animation_w84go"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7yn3q"]
+resource_name = "activate"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.2, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.27450982), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4knu"]
+_data = {
+&"RESET": SubResource("Animation_w84go"),
+&"activate": SubResource("Animation_7yn3q")
+}
+
+[node name="SewerVent" type="Node2D" unique_id=1888909091]
+script = ExtResource("1_w84go")
+
+[node name="EmptySprite" type="Sprite2D" parent="." unique_id=773412529]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_7j0kh")
+
+[node name="GreenSprite" type="Sprite2D" parent="." unique_id=268322340]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_w84go")
+
+[node name="ActivateAnim" type="AnimationPlayer" parent="." unique_id=1684491694]
+libraries/ = SubResource("AnimationLibrary_h4knu")
