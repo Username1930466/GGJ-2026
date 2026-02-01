@@ -2,10 +2,51 @@
 
 [ext_resource type="Script" uid="uid://bpou1ahrl0lit" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bs33f17v4cl03" path="res://art/PlagueWalk_01.PNG" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://2e7hrvicyol5" path="res://art/player sprites/PlagueWalk_03.PNG" id="2_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://d13dr38a8pak5" path="res://art/PlagueWalk_02.PNG" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://c2uaiwr788co" path="res://art/player sprites/PlagueWalk_04.PNG" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://dsiwdvsfjtbll" path="res://art/player sprites/PlagueWalk_05.PNG" id="4_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://bsg3y62fj101l" path="res://art/player sprites/PlagueWalk_06.PNG" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://dpugfal8i5vk8" path="res://art/player sprites/PlagueWalk_09.PNG" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dx4fc1802tgvd" path="res://art/player sprites/PlagueWalk_10.PNG" id="7_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://divtg3kubh10m" path="res://art/player sprites/PlagueWalk_07.PNG" id="10_oprun"]
+[ext_resource type="Texture2D" uid="uid://dc2eblsitt55" path="res://art/player sprites/PlagueWalk_08.PNG" id="11_a8ls1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qlg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tuyoq")
+}],
+"loop": true,
+"name": &"bat mask running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3v2ag")
+}],
+"loop": true,
+"name": &"bear mask running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f1ej7")
+}],
+"loop": true,
+"name": &"fox mask running",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_qhqgy")
@@ -14,7 +55,18 @@ animations = [{
 "texture": ExtResource("3_dqkch")
 }],
 "loop": true,
-"name": &"running",
+"name": &"no mask running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a8ls1")
+}],
+"loop": true,
+"name": &"owl mask running",
 "speed": 5.0
 }]
 
@@ -66,8 +118,8 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -145)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"running"
-frame_progress = 0.91728693
+animation = &"no mask running"
+autoplay = "no mask running"
 
 [node name="EyeHeight" type="Node2D" parent="." unique_id=1841328267]
 position = Vector2(0, -200)
@@ -77,14 +129,6 @@ position = Vector2(0, -200)
 [node name="PlayerHitboxCollision" type="CollisionShape2D" parent="PlayerHitboxArea" unique_id=1457380153]
 position = Vector2(-1, -119.5)
 shape = SubResource("RectangleShape2D_qhqgy")
-
-[node name="DebugLabel" type="Label" parent="." unique_id=469023543]
-offset_left = -56.0
-offset_top = -320.0
-offset_right = 57.0
-offset_bottom = -297.0
-text = "Mask Label"
-horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1889413123]
 libraries/ = SubResource("AnimationLibrary_qlg0r")
