@@ -10,6 +10,7 @@ size = Vector2(128, 1578)
 z_index = 6
 script = ExtResource("1_klegx")
 area_2d = NodePath("Area2D")
+speed = 1.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=350424208]
 
