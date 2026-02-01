@@ -16,6 +16,7 @@ const bat_max_y = 200
 @onready var check_point_scene = preload("res://scenes/check_point.tscn")
 @onready var racoon_scene = preload("res://scenes/racoon.tscn")
 @onready var sewerScene = preload("res://scenes/sewer_vent.tscn")
+@onready var jack_scene = preload("res://scenes/jack.tscn")
 
 func _ready() -> void:
 	reset_timer($BatsTimer)
@@ -48,9 +49,14 @@ func stop_all_timers()-> void:
 	$ArmyTimer.stop()
 	$SewerTimer.stop()
 
-func spawn_jack()->void:
-	#[TO-DO] spawn jack the ripper encoutner when an ally spawns
-	pass
+func spawn_jack(pos:Vector2)->void:
+	if randi_range(1, 4) == 1:
+		var jack = jack_scene.instantiate()
+		jack.position = pos
+		jack.position.y += 650
+		jack.visible = false
+		get_parent().add_child(jack)
+		print("jack spawn")
 
 func _on_bats_timer_timeout() -> void:
 	var batSwarmInstance = batSwarmScene.instantiate()

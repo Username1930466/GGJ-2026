@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bg7g8a5ui3y0o" path="res://art/ui/High_Scores_Button.png" id="4_8ln24"]
 [ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
 [ext_resource type="Texture2D" uid="uid://t525ntvigvco" path="res://art/ui/Quit_Button.png" id="5_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://cjexqxibtqnqm" path="res://art/ui/Masqueraid_Title.png" id="8_tbmy8"]
 
 [node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores_panel", "high_scores_back_button", "center_container", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
 layout_mode = 3
@@ -293,3 +294,8 @@ theme = ExtResource("1_l6cm7")
 text = "0"
 fit_content = true
 autowrap_mode = 0
+
+[node name="MasqueraidTitle" type="Sprite2D" parent="." unique_id=281293573]
+position = Vector2(960, 250)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_tbmy8")

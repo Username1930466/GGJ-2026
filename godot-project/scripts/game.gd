@@ -29,6 +29,7 @@ func _ready() -> void:
 	enemy_spawner.enemy_spawned.connect(_on_encounter_spawned)
 	player.player_died.connect(enemy_spawner.stop_all_timers)
 	stop_movement.connect(floor_and_bg._on_death)
+	floor_and_bg.alley_spawned.connect(enemy_spawner.spawn_jack)
 	
 	is_playing = true
 

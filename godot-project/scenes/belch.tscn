@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cvih6mxkt37x2"]
+
+[ext_resource type="Texture2D" uid="uid://bhn1qx8f6k80p" path="res://art/enemy sprites/VentGhost_01.PNG" id="1_0ip5q"]
+[ext_resource type="Script" uid="uid://c705leauov6jw" path="res://scripts/belch.gd" id="1_iecx2"]
+[ext_resource type="Texture2D" uid="uid://b17gpsgkyk2bh" path="res://art/enemy sprites/VentGhost_02.PNG" id="2_iecx2"]
+[ext_resource type="Texture2D" uid="uid://ugfhugd7bc2y" path="res://art/enemy sprites/VentGhost_03.PNG" id="3_g4elt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxonk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0ip5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iecx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g4elt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ip5q"]
+size = Vector2(106, 178)
+
+[sub_resource type="Animation" id="Animation_iecx2"]
+resource_name = "Fizzle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g4elt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nxonk"]
+_data = {
+&"Fizzle": SubResource("Animation_iecx2"),
+&"RESET": SubResource("Animation_g4elt")
+}
+
+[node name="Belch" type="Node2D" unique_id=2136122456]
+script = ExtResource("1_iecx2")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1636065277]
+position = Vector2(0, -100.999985)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_nxonk")
+autoplay = "default"
+frame_progress = 0.8451063
+
+[node name="BelchArea" type="Area2D" parent="." unique_id=1757543082]
+
+[node name="BelchCollision" type="CollisionShape2D" parent="BelchArea" unique_id=42293696]
+position = Vector2(0, -87)
+shape = SubResource("RectangleShape2D_0ip5q")
+
+[node name="FizzleAnim" type="AnimationPlayer" parent="." unique_id=1435605513]
+libraries/ = SubResource("AnimationLibrary_nxonk")
+
+[node name="FizzleTimer" type="Timer" parent="." unique_id=1408065507]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="area_entered" from="BelchArea" to="." method="_on_belch_area_area_entered"]
+[connection signal="timeout" from="FizzleTimer" to="." method="_on_fizzle_timer_timeout"]

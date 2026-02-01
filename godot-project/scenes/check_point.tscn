@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d17vasflu026"]
 
 [ext_resource type="Script" uid="uid://b6b87mpllcifr" path="res://scripts/officer.gd" id="1_klegx"]
-[ext_resource type="Texture2D" uid="uid://dco1p5dm5b7u7" path="res://art/enemy sprites/Officer_01.PNG" id="2_klegx"]
+[ext_resource type="Texture2D" uid="uid://b6efeo46w87qh" path="res://art/enemy sprites/Officer_02.PNG" id="2_klegx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xx78p"]
 size = Vector2(128, 1578)
