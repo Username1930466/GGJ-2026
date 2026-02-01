@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://divtg3kubh10m" path="res://art/player sprites/PlagueWalk_07.PNG" id="10_oprun"]
 [ext_resource type="Texture2D" uid="uid://dc2eblsitt55" path="res://art/player sprites/PlagueWalk_08.PNG" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://1fwggqndr0e1" path="res://art/Lantern_01.PNG" id="12_3v2ag"]
+[ext_resource type="AudioStream" uid="uid://bol6rduwuxbb8" path="res://audio/SFX/player/Dash Whoosh.wav" id="13_jej6c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -198,3 +199,7 @@ texture = ExtResource("12_3v2ag")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Lantern" unique_id=787641170]
 libraries/ = SubResource("AnimationLibrary_oprun")
+
+[node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=2108265537]
+stream = ExtResource("13_jej6c")
+volume_db = 10.0
