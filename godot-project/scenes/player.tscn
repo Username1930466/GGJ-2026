@@ -9,10 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://bsg3y62fj101l" path="res://art/player sprites/PlagueWalk_06.PNG" id="5_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://dpugfal8i5vk8" path="res://art/player sprites/PlagueWalk_09.PNG" id="6_jej6c"]
 [ext_resource type="Texture2D" uid="uid://dx4fc1802tgvd" path="res://art/player sprites/PlagueWalk_10.PNG" id="7_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://bhr2bwy6mcogg" path="res://art/player sprites/PlagueDash_02.PNG" id="10_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://divtg3kubh10m" path="res://art/player sprites/PlagueWalk_07.PNG" id="10_oprun"]
 [ext_resource type="Texture2D" uid="uid://dc2eblsitt55" path="res://art/player sprites/PlagueWalk_08.PNG" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://1fwggqndr0e1" path="res://art/Lantern_01.PNG" id="12_3v2ag"]
-[ext_resource type="AudioStream" uid="uid://bol6rduwuxbb8" path="res://audio/SFX/player/Dash Whoosh.wav" id="13_jej6c"]
+[ext_resource type="Script" path="res://scripts/player_ambient_sound.gd" id="13_f1ej7"]
+[ext_resource type="AudioStream" uid="uid://bn5hhp5qqbs1j" path="res://audio/SFX/player/Coughing.wav" id="14_oprun"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -62,6 +64,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_a8ls1")
+}],
+"loop": true,
+"name": &"owl mask dash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("10_oprun")
 }, {
 "duration": 1.0,
@@ -89,6 +99,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"owl mask dash"]
+}
 
 [sub_resource type="Animation" id="Animation_dqkch"]
 resource_name = "dash"
@@ -103,6 +125,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(200, 900), Vector2(1000, 900), Vector2(1000, 900), Vector2(200, 900)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"owl mask dash", &"fox mask running"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
@@ -177,7 +211,7 @@ lantern_idle_pos = Vector2(-257, -108)
 position = Vector2(0, -145)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"bear mask running"
+animation = &"owl mask dash"
 autoplay = "no mask running"
 
 [node name="EyeHeight" type="Node2D" parent="." unique_id=1841328267]
@@ -200,6 +234,9 @@ texture = ExtResource("12_3v2ag")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Lantern" unique_id=787641170]
 libraries/ = SubResource("AnimationLibrary_oprun")
 
-[node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=2108265537]
-stream = ExtResource("13_jej6c")
-volume_db = 10.0
+[node name="PlayerAmbientSound" type="Timer" parent="." unique_id=34915363 node_paths=PackedStringArray("audio_stream_player")]
+script = ExtResource("13_f1ej7")
+audio_stream_player = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerAmbientSound" unique_id=46566128]
+stream = ExtResource("14_oprun")

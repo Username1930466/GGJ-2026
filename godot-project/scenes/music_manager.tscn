@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cpjq6qi03sld"]
 
-[ext_resource type="Script" path="res://scripts/MusicManager.gd" id="1_hetdf"]
-[ext_resource type="AudioStream" uid="uid://dg48pficthcmp" path="res://audio/Dr. Bubonic Accelerating.ogg" id="2_hetdf"]
+[ext_resource type="Script" uid="uid://cdsdhxvtf1a8x" path="res://scripts/MusicManager.gd" id="1_hetdf"]
+[ext_resource type="AudioStream" uid="uid://dri5cxof3cn6f" path="res://audio/Dr. Bubonic Accelerating.wav" id="2_jd6i5"]
 [ext_resource type="AudioStream" uid="uid://cgv6et7gp0tke" path="res://audio/Menu MX.wav" id="3_jd6i5"]
 
 [node name="MusicManager" type="Node" unique_id=28513735 node_paths=PackedStringArray("audio_stream_player")]
 script = ExtResource("1_hetdf")
-game_track = ExtResource("2_hetdf")
-menu_track = ExtResource("2_hetdf")
+game_track = ExtResource("2_jd6i5")
+menu_track = ExtResource("3_jd6i5")
 audio_stream_player = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1476455349]

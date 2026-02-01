@@ -1,9 +1,17 @@
 [gd_scene format=3 uid="uid://dh8qlonkcflm1"]
 
 [ext_resource type="Texture2D" uid="uid://cjg6v0n4n1h6k" path="res://art/Alley_02.PNG" id="1_knqwg"]
+[ext_resource type="Script" path="res://scripts/alley.gd" id="1_mxqnx"]
+[ext_resource type="AudioStream" uid="uid://cxmrvo6qxlmlx" path="res://audio/SFX/environment/Alley wail.wav" id="3_556vy"]
 
-[node name="Alley" type="Node2D" unique_id=1900122027]
+[node name="Alley" type="Node2D" unique_id=1900122027 node_paths=PackedStringArray("audio_stream_player")]
+script = ExtResource("1_mxqnx")
+audio_stream_player = NodePath("AudioStreamPlayer")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=53606351]
 scale = Vector2(0.333, 0.333)
 texture = ExtResource("1_knqwg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1838026446]
+stream = ExtResource("3_556vy")
+volume_db = 5.0

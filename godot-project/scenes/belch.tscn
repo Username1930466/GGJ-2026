@@ -3,9 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bhn1qx8f6k80p" path="res://art/enemy sprites/VentGhost_01.PNG" id="1_0ip5q"]
 [ext_resource type="Script" uid="uid://c705leauov6jw" path="res://scripts/belch.gd" id="1_iecx2"]
 [ext_resource type="Texture2D" uid="uid://b17gpsgkyk2bh" path="res://art/enemy sprites/VentGhost_02.PNG" id="2_iecx2"]
-[ext_resource type="AudioStream" uid="uid://cfpx818wqyqkt" path="res://audio/SFX/environment/Miasma Belch.wav" id="2_nxonk"]
 [ext_resource type="Texture2D" uid="uid://ugfhugd7bc2y" path="res://art/enemy sprites/VentGhost_03.PNG" id="3_g4elt"]
-[ext_resource type="AudioStream" uid="uid://4ojwj1aw68ym" path="res://audio/Miasma Belch.wav" id="3_lxkhy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxonk"]
 animations = [{
@@ -66,8 +64,6 @@ _data = {
 
 [node name="Belch" type="Node2D" unique_id=2136122456]
 script = ExtResource("1_iecx2")
-sound1 = ExtResource("2_nxonk")
-sound2 = ExtResource("3_lxkhy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1636065277]
 position = Vector2(0, -100.999985)
@@ -89,9 +85,6 @@ libraries/ = SubResource("AnimationLibrary_nxonk")
 wait_time = 0.2
 one_shot = true
 autostart = true
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=569032759]
-volume_db = 10.0
 
 [connection signal="area_entered" from="BelchArea" to="." method="_on_belch_area_area_entered"]
 [connection signal="timeout" from="FizzleTimer" to="." method="_on_fizzle_timer_timeout"]

@@ -28,4 +28,3 @@ offset = Vector2(350, -900)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1154090798]
 stream = ExtResource("4_vy0h7")
-volume_db = 10.0
