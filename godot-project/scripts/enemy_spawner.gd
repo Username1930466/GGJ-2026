@@ -1,4 +1,7 @@
-extends Node2D
+class_name EnemySpawner extends Node2D
+
+signal enemy_spawned(node:Node)
+
 
 const bats_timer_avg: int = 10 # Swarm of Bats average time between spawns
 const raccoon_timer_avg: int = 20 # Raccoon average time between spawns
@@ -23,6 +26,8 @@ func _ready() -> void:
 	$RaccoonTimer.start()
 	$ArmyTimer.start()
 	$SewerTimer.start()
+	#_on_army_timer_timeout.call_deferred()
+	#_on_raccoon_timer_timeout.call_deferred()
 
 func reset_timer(timer):
 	match timer.name:
@@ -33,24 +38,36 @@ func reset_timer(timer):
 	
 	# theres probably a better way to do this but all i can think of is using arrays/dictionarys and i feel like that would be overcomplicating things
 
+func stop_all_timers()-> void:
+	$BatsTimer.stop()
+	$RaccoonTimer.stop()
+	$ArmyTimer.stop()
+
+func spawn_jack()->void:
+	#[TO-DO] spawn jack the ripper encoutner when an ally spawns
+	pass
+
 func _on_bats_timer_timeout() -> void:
 	var batSwarmInstance = batSwarmScene.instantiate()
 	get_parent().add_child(batSwarmInstance)
 	batSwarmInstance.position = Vector2(2500,randf_range(bat_min_y,bat_max_y))
+	enemy_spawned.emit(batSwarmInstance)
 	reset_timer($BatsTimer)
 
 func _on_raccoon_timer_timeout() -> void:
 	print("raccoon spawn")
 	var racoon_instance = racoon_scene.instantiate()
 	get_parent().add_child(racoon_instance)
-	racoon_instance.position = Vector2(2500,850)
+	racoon_instance.position = Vector2(2500,915)
+	enemy_spawned.emit(racoon_instance)
 	reset_timer($RaccoonTimer)
 
 func _on_army_timer_timeout() -> void:
 	print("army spawn")
 	var check_point_instance = check_point_scene.instantiate()
 	get_parent().add_child(check_point_instance)
-	check_point_instance.position = Vector2(2500,850)
+	check_point_instance.position = Vector2(2500,915)
+	enemy_spawned.emit(check_point_instance)
 	reset_timer($ArmyTimer)
 
 

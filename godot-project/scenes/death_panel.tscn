@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://kwct21g744cj"]
+
+[node name="DeathPanel" type="CanvasLayer" unique_id=552984179]
+visible = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=652677716]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="HBoxContainer" unique_id=840098335]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer" unique_id=325612385]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel" unique_id=1320250219]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -33.0
+offset_right = 48.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=1954471121]
+layout_mode = 2
+text = "Retry
+"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=95532157]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Spacer2" type="Control" parent="HBoxContainer" unique_id=454552238]
+layout_mode = 2
+size_flags_horizontal = 3
