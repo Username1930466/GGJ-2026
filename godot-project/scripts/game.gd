@@ -11,8 +11,6 @@ signal stop_movement
 @onready var floor_and_bg: Node2D = $"Floor & BG"
 @onready var enemy_spawner: EnemySpawner = $EnemySpawner
 
-
-
 var is_playing:bool = false
 var current_score:int = 0:
 	set(value):

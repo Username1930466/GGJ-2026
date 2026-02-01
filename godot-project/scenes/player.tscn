@@ -12,8 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://divtg3kubh10m" path="res://art/player sprites/PlagueWalk_07.PNG" id="10_oprun"]
 [ext_resource type="Texture2D" uid="uid://dc2eblsitt55" path="res://art/player sprites/PlagueWalk_08.PNG" id="11_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://1fwggqndr0e1" path="res://art/Lantern_01.PNG" id="12_3v2ag"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://3hy6go8ox06n" path="res://scripts/player_ambient_sound.gd" id="13_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://bn5hhp5qqbs1j" path="res://audio/SFX/player/Coughing.wav" id="14_oprun"]
+=======
+[ext_resource type="AudioStream" uid="uid://bol6rduwuxbb8" path="res://audio/SFX/player/Dash Whoosh.wav" id="13_jej6c"]
+>>>>>>> main
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -201,9 +205,15 @@ texture = ExtResource("12_3v2ag")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Lantern" unique_id=787641170]
 libraries/ = SubResource("AnimationLibrary_oprun")
 
+<<<<<<< HEAD
 [node name="PlayerAmbientSound" type="Timer" parent="." unique_id=34915363 node_paths=PackedStringArray("audio_stream_player")]
 script = ExtResource("13_f1ej7")
 audio_stream_player = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PlayerAmbientSound" unique_id=46566128]
 stream = ExtResource("14_oprun")
+=======
+[node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=2108265537]
+stream = ExtResource("13_jej6c")
+volume_db = 10.0
+>>>>>>> main
