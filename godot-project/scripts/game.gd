@@ -6,7 +6,7 @@ signal stop_movement
 @export var hud: HUD
 @export var player: Player
 @export var input_controller: InputController
-@onready var death_panel: CanvasLayer = $DeathPanel
+@onready var death_panel: DeathPanel = $DeathPanel
 
 @onready var floor_and_bg: Node2D = $"Floor & BG"
 @onready var enemy_spawner: EnemySpawner = $EnemySpawner
@@ -43,13 +43,16 @@ func _on_player_died()-> void:
 	
 	#[TO-DO] call stop on the enemy spawners and the floor movement script
 	#[TO-DO] display a death screen with the score and potential highscore?
-	check_for_high_score()
+	var high_score:bool = check_for_high_score()
+	
+	death_panel.set_score(current_score)
+	death_panel.show_pannel()
+	
 	Global.game_ended.emit()
 	stop_movement.emit()
-	death_panel.visible = true
 	#get_tree().change_scene_to_file.call_deferred("res://scenes/main_menu.tscn")
 
-func check_for_high_score() -> void:
+func check_for_high_score() -> bool:
 	# High scores are formatted as [{"name": "Alice", "score": 1000}, etc.]
 	var high_scores: Array[Dictionary] = Global.high_scores
 	
@@ -69,7 +72,8 @@ func check_for_high_score() -> void:
 			
 			# Update the global scores
 			Global.high_scores = high_scores
-			break
+			return true
+	return false
 
 func _on_encounter_spawned(scene:Node)-> void:
 	stop_movement.connect(scene.stop_movement)

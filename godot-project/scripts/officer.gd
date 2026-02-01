@@ -21,6 +21,7 @@ func _on_area_exited(other_area: Area2D) -> void:
 
 func _process(delta: float) -> void:
 	position.x -= 250*speed * delta
+	position.x = round(position.x)
 
 func stop_movement()-> void:
 	speed = 0
