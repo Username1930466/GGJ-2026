@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cybacq8qfsq7n"
-path="res://.godot/imported/Revealing_Mask_Button.png-73f924e0dacbfdd562eb5e87bbe68a0a.ctex"
+uid="uid://2lfmisdvf4kl"
+path="res://.godot/imported/NumberThree.png-1cfa465533b882ef9c3d6aaee7d30d61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/ui/Revealing_Mask_Button.png"
-dest_files=["res://.godot/imported/Revealing_Mask_Button.png-73f924e0dacbfdd562eb5e87bbe68a0a.ctex"]
+source_file="res://art/ui/NumberThree.png"
+dest_files=["res://.godot/imported/NumberThree.png-1cfa465533b882ef9c3d6aaee7d30d61.ctex"]
 
 [params]
 

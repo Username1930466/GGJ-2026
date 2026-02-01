@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d17vasflu026"]
+
+[ext_resource type="Script" uid="uid://b6b87mpllcifr" path="res://scenes/check_point.gd" id="1_klegx"]
+[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="2_7brbk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xx78p"]
+size = Vector2(128, 896)
+
+[node name="CheckPoint" type="Node2D" unique_id=688082479 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("1_klegx")
+area_2d = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=350424208]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=988889364]
+shape = SubResource("RectangleShape2D_xx78p")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=1277753944]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1194710266]
+texture = ExtResource("2_7brbk")

@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://ekowrcywmyei" path="res://scripts/hud.gd" id="1_5ysmq"]
 [ext_resource type="Theme" uid="uid://cgc2dcf1l65js" path="res://ui_theme/default_theme.tres" id="2_6fi6k"]
-[ext_resource type="Texture2D" uid="uid://bgiqi71evtare" path="res://art/ui/Bat_Mask_Button.png" id="3_6fi6k"]
+[ext_resource type="Texture2D" uid="uid://bgiqi71evtare" path="res://art/ui/Bat_Mask.png" id="3_6fi6k"]
 [ext_resource type="Texture2D" uid="uid://bl24tx88eprxc" path="res://art/ui/Sonar_Blast_Button.png" id="3_eld54"]
 [ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="3_uo2fv"]
-[ext_resource type="Texture2D" uid="uid://deoob3gyuc1gu" path="res://art/ui/Number_One_Button.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://deoob3gyuc1gu" path="res://art/ui/NumberOne.png" id="4_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://ccjwqu61wrw1a" path="res://art/ui/Dash_Button.png" id="5_3swnk"]
-[ext_resource type="Texture2D" uid="uid://dk7xx2qieb7fa" path="res://art/ui/Speed_Mask_Button.png" id="5_5pdws"]
-[ext_resource type="Texture2D" uid="uid://bel8u6461boh4" path="res://art/ui/Number_Two_Button.png" id="6_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://cybacq8qfsq7n" path="res://art/ui/Revealing_Mask_Button.png" id="7_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://dk7xx2qieb7fa" path="res://art/ui/Speed_Mask.png" id="5_5pdws"]
+[ext_resource type="Texture2D" uid="uid://bel8u6461boh4" path="res://art/ui/NumberTwo.png" id="6_hd3ao"]
+[ext_resource type="Texture2D" uid="uid://cybacq8qfsq7n" path="res://art/ui/Revealing_Mask.png" id="7_0i1j5"]
 [ext_resource type="Texture2D" uid="uid://dqumjqaip18qb" path="res://art/ui/Hand_Lantern_Button.png" id="7_qkknv"]
-[ext_resource type="Texture2D" uid="uid://2lfmisdvf4kl" path="res://art/ui/Number_Three_Button.png" id="8_mphia"]
-[ext_resource type="Texture2D" uid="uid://2y5fmuviont4" path="res://art/ui/Candy_Bar_Button.png" id="9_0m4u7"]
+[ext_resource type="Texture2D" uid="uid://2lfmisdvf4kl" path="res://art/ui/NumberThree.png" id="8_mphia"]
+[ext_resource type="Texture2D" uid="uid://b34gl0gdc23jo" path="res://art/ui/Candy_Bar_Button.png" id="9_0m4u7"]
 [ext_resource type="Texture2D" uid="uid://sy6avglu6m23" path="res://art/ui/Number_Four_Button.png" id="10_apjy4"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1606327440 node_paths=PackedStringArray("score_value", "ability_1", "ability_input_1", "ability_2", "ability_input_2", "ability_3", "ability_input_3", "ability_4", "ability_input_4", "ability_5", "ability_input_5")]
@@ -28,15 +28,6 @@ ability_4 = NodePath("HUD/AbilityBar/HBoxContainer/Ability4")
 ability_input_4 = NodePath("HUD/AbilityBar/HBoxContainer/AbilityInput4")
 ability_5 = NodePath("HUD/AbilityBar/HBoxContainer/Ability5")
 ability_input_5 = NodePath("HUD/AbilityBar/HBoxContainer/AbilityInput5")
-ability_1_mask_icon = ExtResource("3_6fi6k")
-ability_1_ability_icon = ExtResource("3_uo2fv")
-ability_2_mask_icon = ExtResource("5_5pdws")
-ability_2_ability_icon = ExtResource("3_uo2fv")
-ability_3_mask_icon = ExtResource("7_0i1j5")
-ability_3_ability_icon = ExtResource("3_uo2fv")
-ability_4_mask_icon = ExtResource("9_0m4u7")
-ability_4_ability_icon = ExtResource("3_uo2fv")
-
 ability_1_mask_icon = ExtResource("3_6fi6k")
 ability_1_ability_icon = ExtResource("3_eld54")
 ability_2_mask_icon = ExtResource("5_5pdws")
@@ -167,6 +158,7 @@ texture = ExtResource("10_apjy4")
 expand_mode = 1
 
 [node name="Ability5" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=548927155]
+visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -175,6 +167,7 @@ texture = ExtResource("3_uo2fv")
 expand_mode = 1
 
 [node name="AbilityInput5" type="TextureRect" parent="HUD/AbilityBar/HBoxContainer" unique_id=1504390740]
+visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4

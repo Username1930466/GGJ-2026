@@ -9,6 +9,8 @@ const bat_min_y = 700
 const bat_max_y = 200
 
 @onready var batSwarmScene = preload("res://scenes/bat_swarm.tscn")
+@onready var check_point_scene = preload("res://scenes/check_point.tscn")
+@onready var racoon_scene = preload("res://scenes/racoon.tscn")
 
 func _ready() -> void:
 	reset_timer($BatsTimer)
@@ -34,8 +36,14 @@ func _on_bats_timer_timeout() -> void:
 
 func _on_raccoon_timer_timeout() -> void:
 	print("raccoon spawn")
+	var racoon_instance = racoon_scene.instantiate()
+	get_parent().add_child(racoon_instance)
+	racoon_instance.position = Vector2(2500,850)
 	reset_timer($RaccoonTimer)
 
 func _on_army_timer_timeout() -> void:
 	print("army spawn")
+	var check_point_instance = check_point_scene.instantiate()
+	get_parent().add_child(check_point_instance)
+	check_point_instance.position = Vector2(2500,850)
 	reset_timer($ArmyTimer)
