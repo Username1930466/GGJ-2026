@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://1v3wtym1u8lq" path="res://scripts/jack.gd" id="1_d0iqa"]
 [ext_resource type="Texture2D" uid="uid://bvbt3o3lfpr6d" path="res://art/enemy sprites/Jack_01.PNG" id="1_wef06"]
+[ext_resource type="Texture2D" uid="uid://btriokkgcbu5e" path="res://art/enemy sprites/Jack_02.PNG" id="3_ueteg"]
+[ext_resource type="Texture2D" uid="uid://6qta1ut0yp10" path="res://art/enemy sprites/Jack_03.PNG" id="4_7nm77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixvvc"]
-size = Vector2(300, 896)
+size = Vector2(500, 896)
 
 [sub_resource type="Animation" id="Animation_d0iqa"]
 length = 0.001
@@ -19,6 +21,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_wef06")]
 }
 
 [sub_resource type="Animation" id="Animation_wn71h"]
@@ -37,10 +51,26 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ueteg"]
+resource_name = "kill"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14, 0.28, 0.42, 0.56, 0.7, 0.84),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_wef06"), ExtResource("3_ueteg"), ExtResource("4_7nm77"), ExtResource("3_ueteg"), ExtResource("4_7nm77"), ExtResource("3_ueteg"), ExtResource("4_7nm77")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ueteg"]
 _data = {
 &"RESET": SubResource("Animation_d0iqa"),
-&"die": SubResource("Animation_wn71h")
+&"die": SubResource("Animation_wn71h"),
+&"kill": SubResource("Animation_ueteg")
 }
 
 [node name="Jack" type="Node2D" unique_id=57272201 node_paths=PackedStringArray("area_2d")]

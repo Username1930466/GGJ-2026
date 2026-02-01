@@ -11,6 +11,7 @@ func _ready() -> void:
 func _on_area_entered(other_area: Area2D) -> void:
 	var collider:Node = other_area.get_parent()
 	if collider is Player:
+		visible = true
 		var player:Player = collider as Player
 		print("jack collids with player")
 		if player.lantern_used:
@@ -19,6 +20,8 @@ func _on_area_entered(other_area: Area2D) -> void:
 			await get_tree().create_timer(0.7).timeout
 		else:
 			print("jack killed player")
+			$Visuals/Sprite2D/AnimationPlayer.play("kill")
+			await get_tree().create_timer(0.7).timeout
 			player.kill_player(Global.WAYS_TO_DIE.JACK_THE_RIPPER)
 
 func _on_area_exited(other_area: Area2D) -> void:
