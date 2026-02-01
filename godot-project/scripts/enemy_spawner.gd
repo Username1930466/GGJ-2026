@@ -18,7 +18,10 @@ const bat_max_y = 200
 @onready var sewerScene = preload("res://scenes/sewer_vent.tscn")
 @onready var jack_scene = preload("res://scenes/jack.tscn")
 
-var spawn_buffer_timer:float = 1.5
+@export var floor_and_bg: Node2D
+
+var spawn_buffer_timer:float = 1.5 # Buffer of how soon sewer/ officer is to avoid spawing overlap
+var jack_building_buffer:int = 2 # Buffer of how close jack is to avoid spawing sewer/ officer
 
 func _ready() -> void:
 	reset_timer($BatsTimer)
@@ -83,7 +86,7 @@ func _on_raccoon_timer_timeout() -> void:
 
 func _on_army_timer_timeout() -> void:
 	# Stops spawn overlap
-	if $SewerTimer.time_left < spawn_buffer_timer:
+	if $SewerTimer.time_left < spawn_buffer_timer || floor_and_bg.buildings_till_alley < jack_building_buffer:
 		reset_timer($ArmyTimer)
 		return
 		
@@ -96,7 +99,7 @@ func _on_army_timer_timeout() -> void:
 
 
 func _on_sewer_timer_timeout() -> void:
-	if $ArmyTimer.time_left < spawn_buffer_timer:
+	if $ArmyTimer.time_left < spawn_buffer_timer || floor_and_bg.buildings_till_alley < jack_building_buffer:
 		reset_timer($SewerTimer)
 		return
 		
