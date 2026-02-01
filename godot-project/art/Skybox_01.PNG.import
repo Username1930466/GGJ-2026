@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf4ntxh07exn8"
-path="res://.godot/imported/Bat_01.PNG-00cadfc666cdcd89e21e6995e1a2b7a3.ctex"
+uid="uid://ctahb0tk7vih2"
+path="res://.godot/imported/Skybox_01.PNG-88eefa5e7b5677b5f0dd868f5267c124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Bat_01.PNG"
-dest_files=["res://.godot/imported/Bat_01.PNG-00cadfc666cdcd89e21e6995e1a2b7a3.ctex"]
+source_file="res://art/Skybox_01.PNG"
+dest_files=["res://.godot/imported/Skybox_01.PNG-88eefa5e7b5677b5f0dd868f5267c124.ctex"]
 
 [params]
 

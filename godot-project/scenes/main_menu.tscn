@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://nkx1sj115ct8" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://cgc2dcf1l65js" path="res://ui_theme/default_theme.tres" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://c8qsvsg7pnr8f" path="res://art/ui/map.jpg" id="2_oa1go"]
+[ext_resource type="Texture2D" uid="uid://dp73t0uha54ny" path="res://art/ui/menu_bg.jpg" id="2_oa1go"]
 [ext_resource type="Texture2D" uid="uid://ddyf8csuoxk31" path="res://art/ui/New_Game_Button.png" id="3_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bg7g8a5ui3y0o" path="res://art/ui/High_Scores_Button.png" id="4_8ln24"]
 [ext_resource type="Texture2D" uid="uid://c3ve1bjoyvism" path="res://art/ui/Credits_Button.png" id="5_oa1go"]
 [ext_resource type="Texture2D" uid="uid://t525ntvigvco" path="res://art/ui/Quit_Button.png" id="5_rtw2f"]
 
-[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores", "high_scores_back_button")]
+[node name="MainMenu" type="Control" unique_id=915590663 node_paths=PackedStringArray("play_button", "high_scores_button", "credits_button", "exit_button", "credits", "credits_back_button", "high_scores_panel", "high_scores_back_button", "center_container", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,8 +22,15 @@ credits_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control3/Cr
 exit_button = NodePath("HBoxContainer/VBoxContainer/VBoxContainer/Control4/QuitButton")
 credits = NodePath("Credits")
 credits_back_button = NodePath("Credits/Panel/CreditsBackButton")
-high_scores = NodePath("HighScores")
+high_scores_panel = NodePath("HighScores")
 high_scores_back_button = NodePath("HighScores/Panel/HighScoresBackButton")
+center_container = NodePath("HighScores/Panel/CenterContainer")
+name_label_1 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel1")
+name_label_2 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel2")
+name_label_3 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer/NameLabel3")
+score_label_1 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel1")
+score_label_2 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel2")
+score_label_3 = NodePath("HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/ScoreLabel3")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=956483153]
 modulate = Color(0.92, 0.92, 0.92, 0.59607846)
@@ -31,12 +38,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -557.0
-offset_right = 5.0
-offset_bottom = 283.0
+offset_left = -90.0
+offset_top = -472.0
+offset_right = -85.0
+offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.088367, 1.088367)
 texture = ExtResource("2_oa1go")
+expand_mode = 2
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1881041814]
@@ -170,13 +180,18 @@ text = "Back"
 
 [node name="Label" type="Label" parent="Credits/Panel" unique_id=681397927]
 layout_mode = 0
-offset_left = -200.0
-offset_top = 100.0
-offset_right = 768.0
-offset_bottom = 409.0
-scale = Vector2(2.5, 2.5)
-text = "Alvin V ??? - Art
-Ana ??? - Art
+offset_left = -225.0
+offset_right = 743.0
+offset_bottom = 465.0
+scale = Vector2(2.25, 2.25)
+text = "Game Designed and Developed during Global Game Jam 2026
+Theme: Masks
+Description: Hectic Side-scroller where the Player
+ controls a Plague Doctor navigating Victorian London 
+ puzzling through various obstacles to maximize score
+
+Alvin V ??? - Art
+Anastasia Cook- Senior Artist
 Connor ??? - Audio
 Kesler ??? - Coder
 Jake ??? - Audio
@@ -211,3 +226,70 @@ layout_mode = 1
 offset_right = 183.0
 offset_bottom = 80.0
 text = "Back"
+
+[node name="CenterContainer" type="CenterContainer" parent="HighScores/Panel" unique_id=1231513129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HighScores/Panel/CenterContainer" unique_id=315471468]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer" unique_id=1313682874]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1621827764]
+layout_mode = 2
+
+[node name="NameLabel1" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1242198454]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameLabel2" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=187526414]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="NameLabel3" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=592670263]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "UNKOWN:"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Control" type="Control" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=2067004456]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1820054992]
+layout_mode = 2
+
+[node name="ScoreLabel1" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1373171512]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreLabel2" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1809718086]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ScoreLabel3" type="RichTextLabel" parent="HighScores/Panel/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1489284262]
+layout_mode = 2
+theme = ExtResource("1_l6cm7")
+text = "0"
+fit_content = true
+autowrap_mode = 0

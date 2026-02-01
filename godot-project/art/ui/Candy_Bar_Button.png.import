@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dutpajym6b1ga"
-path="res://.godot/imported/Bat_02.PNG-2b26dc3b5b2779b505f8f2fbc34f735d.ctex"
+uid="uid://2y5fmuviont4"
+path="res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Bat_02.PNG"
-dest_files=["res://.godot/imported/Bat_02.PNG-2b26dc3b5b2779b505f8f2fbc34f735d.ctex"]
+source_file="res://art/ui/Candy_Bar_Button.png"
+dest_files=["res://.godot/imported/Candy_Bar_Button.png-6b01cbdb48ec14fe55be8f3d74066153.ctex"]
 
 [params]
 

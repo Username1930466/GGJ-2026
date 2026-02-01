@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmd3wo5dtrpql"
-path="res://.godot/imported/VicHouse_01.PNG-4bfb4eca4bf987c7c67af85ef2c53806.ctex"
+uid="uid://cdlgycuq50kyh"
+path="res://.godot/imported/MidWindowLight_01.PNG-f65f695f9e92e2ece81e28e6b9201e25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/VicHouse_01.PNG"
-dest_files=["res://.godot/imported/VicHouse_01.PNG-4bfb4eca4bf987c7c67af85ef2c53806.ctex"]
+source_file="res://art/building_parts/MidWindowLight_01.PNG"
+dest_files=["res://.godot/imported/MidWindowLight_01.PNG-f65f695f9e92e2ece81e28e6b9201e25.ctex"]
 
 [params]
 

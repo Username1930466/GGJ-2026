@@ -1,6 +1,7 @@
 class_name Player extends Node2D
 
 signal player_died
+signal mask_changed(mask:String)
 
 const startingX = 200
 const speedX = 1500
@@ -15,7 +16,7 @@ var targetX : float = startingX
 func _ready() -> void:
 	$Sprite.play("running")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
 	position.x = lerp(position.x,targetX,0.02)
 	# use arrow keys to switch mask, use same arrow key to remove mask
@@ -44,6 +45,7 @@ func SwitchMask(targetMask):
 	ResetMaskProperties(mask)
 	mask = targetMask
 	$DebugLabel.text = mask
+	mask_changed.emit(targetMask)
 	match mask:
 		
 		"none":
@@ -53,7 +55,7 @@ func SwitchMask(targetMask):
 			var sonarInstance = batMaskSonar.instantiate()
 			get_node("EyeHeight").add_child(sonarInstance)
 			maskPropertyNode = sonarInstance
-		
+					
 		"speed":
 			pass
 		
