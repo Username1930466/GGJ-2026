@@ -1,7 +1,7 @@
 class_name MusicManager extends Node
 
-@export var accelerated_track:AudioStream
-@export var default_track:AudioStream
+@export var game_track:AudioStream
+@export var menu_track:AudioStream
 
 @export var audio_stream_player: AudioStreamPlayer
 
@@ -16,7 +16,7 @@ func _ready() -> void:
 func _on_game_started()-> void:
 	audio_fade_out(1)
 	await fade_tween.finished
-	audio_stream_player.stream = accelerated_track
+	audio_stream_player.stream = game_track
 	audio_stream_player.play()
 	audio_fade_in()
 
@@ -24,7 +24,8 @@ func _on_game_started()-> void:
 func _on_game_ended()-> void:
 	audio_fade_out(1)
 	await fade_tween.finished
-	audio_stream_player.stream = default_track
+	audio_stream_player.stream = menu_track
+
 	audio_stream_player.play()
 	audio_fade_in()
 
