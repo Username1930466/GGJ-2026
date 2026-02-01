@@ -9,6 +9,7 @@ func _process(_delta: float) -> void:
 		$Sprite3.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		$Sprite4.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		$Sprite5.modulate = Color(1.0, 1.0, 1.0, 1.0)
+		$AudioStreamPlayer.play()
 		if batIn != null:
 			batIn.Disperse()
 			batIn = null
