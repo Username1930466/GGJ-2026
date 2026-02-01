@@ -4,6 +4,8 @@ signal player_died
 signal mask_changed(mask:String)
 
 @export var can_die:bool = false
+@onready var sprite: AnimatedSprite2D = $Sprite
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 const startingX = 200
 const speedX = 1500
@@ -15,6 +17,7 @@ var candy_bar_scene:PackedScene = preload("res://scenes/candy_bar.tscn")
 var maskPropertyNode
 
 var targetX : float = startingX
+var alive:bool = true
 
 func _ready() -> void:
 	$Sprite.play("running")
@@ -22,8 +25,9 @@ func _ready() -> void:
 	position.y = 900
 
 func _process(_delta: float) -> void:
-	$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
-	position.x = lerp(position.x,targetX,0.02)
+	if alive:
+		$Sprite.position.x += sin(Time.get_ticks_msec() * 0.01) * 0.8
+		position.x = lerp(position.x,targetX,0.02)
 	# use arrow keys to switch mask, use same arrow key to remove mask
 	if Input.is_action_just_pressed("Mask1"):
 		if mask == "bat":
@@ -52,7 +56,9 @@ func _process(_delta: float) -> void:
 func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
 	if !can_die:
 		return
-	
+	alive = false
+	sprite.stop()
+	animation_player.stop()
 	player_died.emit()
 
 func SwitchMask(targetMask):

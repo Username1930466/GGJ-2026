@@ -1,7 +1,7 @@
-extends Node2D
+class_name Officer extends Node2D
 
 @export var area_2d: Area2D
-
+@export var speed:float = 2
 
 func _ready() -> void:
 	area_2d.area_entered.connect(_on_area_entered)
@@ -20,4 +20,7 @@ func _on_area_exited(other_area: Area2D) -> void:
 	print("Stopped colliding with: ", other_area.name)
 
 func _process(delta: float) -> void:
-	position.x -= 10
+	position.x -= 250*speed * delta
+
+func stop_movement()-> void:
+	speed = 0
