@@ -16,7 +16,7 @@ var building_width = null
 var floor_width = null
 var building_left_edge_threshold = -350
 var building_scene = preload("res://scenes/building.tscn")
-var buildings_till_alley: int = 7
+var buildings_till_alley: int = 1
 var alley_scene = preload("res://scenes/alley.tscn")
 var alley_width = 250
 var last_building: int = 1
@@ -81,7 +81,7 @@ func _process(delta: float) -> void:
 		if building4.position.x >= $Alley.position.x:
 			building4.position.x += alley_width
 		
-		buildings_till_alley = randi_range(5, 7)
+		buildings_till_alley = randi_range(3, 3)
 
 		
 
