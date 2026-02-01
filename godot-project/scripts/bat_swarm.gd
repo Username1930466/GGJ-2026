@@ -57,7 +57,7 @@ func Disperse():
 
 func _on_swarm_area_area_entered(area: Area2D) -> void:
 	if area.name == "PlayerHitboxArea":
-		area.get_parent().Die("Bat")
+		area.get_parent().kill_player(Global.WAYS_TO_DIE.BATS)
 
 func stop_movement()-> void:
 	speed = 0

@@ -2,49 +2,141 @@
 
 [ext_resource type="Script" uid="uid://n6hf7th36d5k" path="res://scripts/death_panel.gd" id="1_qmlx8"]
 
-[node name="DeathPanel" type="CanvasLayer" unique_id=552984179]
+[node name="DeathPanel" type="CanvasLayer" unique_id=552984179 node_paths=PackedStringArray("score_value_label", "death_panel", "retry_button", "main_menu_button", "name_label_1", "name_label_2", "name_label_3", "score_label_1", "score_label_2", "score_label_3")]
 script = ExtResource("1_qmlx8")
+score_value_label = NodePath("DeathPanel/MarginContainer/VBoxContainer/ScoreValueLabel")
+death_panel = NodePath("DeathPanel")
+retry_button = NodePath("DeathPanel/MarginContainer/VBoxContainer/RetryButton")
+main_menu_button = NodePath("DeathPanel/MarginContainer/VBoxContainer/MainMenuButton")
+name_label_1 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer/Label")
+name_label_2 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer2/Label")
+name_label_3 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer3/Label")
+score_label_1 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer/Label2")
+score_label_2 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer2/Label2")
+score_label_3 = NodePath("DeathPanel/MarginContainer/VBoxContainer/HBoxContainer3/Label2")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=652677716]
+[node name="DeathPanel" type="Panel" parent="." unique_id=325612385]
+custom_minimum_size = Vector2(0, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.5
+offset_top = -302.72998
+offset_right = 318.5
+offset_bottom = 297.27002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="DeathPanel" unique_id=1960372454]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Spacer" type="Control" parent="HBoxContainer" unique_id=840098335]
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathPanel/MarginContainer" unique_id=1320250219]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ScoreLabel" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=1142979327]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Score:"
+horizontal_alignment = 1
+
+[node name="ScoreValueLabel" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=1419893619]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "5610"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DeathPanel/MarginContainer/VBoxContainer/ScoreValueLabel" unique_id=1379323748]
+layout_mode = 0
+offset_left = -79.5
+offset_top = -7.2700195
+offset_right = 85.5
+offset_bottom = 37.72998
+rotation = -0.17802358
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]High Score[/rainbow][/wave]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Control" type="Control" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=1036244086]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=918743722]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "High Scores"
+horizontal_alignment = 1
 
-[node name="Panel" type="Panel" parent="HBoxContainer" unique_id=325612385]
+[node name="HBoxContainer" type="HBoxContainer" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=637609399]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2118859746]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "Uknown :"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Panel" unique_id=1320250219]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -33.0
-offset_right = 48.0
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Label2" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1364553234]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
 
-[node name="RetryButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=1954471121]
+[node name="HBoxContainer2" type="HBoxContainer" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=203282105]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1883762407]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Uknown :"
+
+[node name="Label2" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=684705359]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=1605726072]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1242027039]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Uknown :"
+
+[node name="Label2" type="Label" parent="DeathPanel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=670061249]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+
+[node name="Control2" type="Control" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=567696229]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RetryButton" type="Button" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=1954471121]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Retry
 "
 
-[node name="MainMenuButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=95532157]
+[node name="MainMenuButton" type="Button" parent="DeathPanel/MarginContainer/VBoxContainer" unique_id=95532157]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Main Menu"
-
-[node name="Spacer2" type="Control" parent="HBoxContainer" unique_id=454552238]
-layout_mode = 2
-size_flags_horizontal = 3

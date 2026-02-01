@@ -69,14 +69,6 @@ func _process(_delta: float) -> void:
 				lantern_used = false
 				lantern_animator.play("unuse_lantern")
 
-func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
-	if !can_die:
-		return
-	alive = false
-	sprite.stop()
-	animation_player.stop()
-	player_died.emit()
-
 func SwitchMask(targetMask):
 	ResetMaskProperties(mask)
 	mask = targetMask
@@ -118,7 +110,16 @@ func ResetMaskProperties(targetMask):
 			lantern_used = false
 	maskPropertyNode = null
 
-func Die(killer):
+func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
 	if !can_die:
 		return
-	emit_signal("player_died")
+	alive = false
+	sprite.stop()
+	animation_player.stop()
+	player_died.emit()
+
+# Replaced by kill_player()
+#func Die(killer):
+	#if !can_die:
+		#return
+	#emit_signal("player_died")

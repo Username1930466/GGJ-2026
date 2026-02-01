@@ -29,6 +29,7 @@ func _ready() -> void:
 	#_on_army_timer_timeout.call_deferred()
 	#_on_raccoon_timer_timeout.call_deferred()
 	#_on_sewer_timer_timeout.call_deferred()
+	#_on_bats_timer_timeout.call_deferred()
 
 func reset_timer(timer):
 	match timer.name:
@@ -45,6 +46,7 @@ func stop_all_timers()-> void:
 	$BatsTimer.stop()
 	$RaccoonTimer.stop()
 	$ArmyTimer.stop()
+	$SewerTimer.stop()
 
 func spawn_jack()->void:
 	#[TO-DO] spawn jack the ripper encoutner when an ally spawns
