@@ -65,6 +65,7 @@ func spawn_jack(pos:Vector2)->void:
 		jack.position.y += 650
 		jack.visible = false
 		get_parent().add_child(jack)
+		enemy_spawned.emit(jack)
 		print("jack spawn")
 
 func _on_bats_timer_timeout() -> void:
