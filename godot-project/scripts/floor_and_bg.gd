@@ -1,6 +1,6 @@
 extends Node2D
 
-signal alley_spawned
+signal alley_spawned(pos:Vector2)
 
 @onready var floor1: Sprite2D = $Floor1
 @onready var floor2: Sprite2D = $Floor2

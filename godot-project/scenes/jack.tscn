@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://belbiirqe2oex"]
+
+[ext_resource type="Script" uid="uid://1v3wtym1u8lq" path="res://scripts/jack.gd" id="1_d0iqa"]
+[ext_resource type="Texture2D" uid="uid://bvbt3o3lfpr6d" path="res://art/enemy sprites/Jack_01.PNG" id="1_wef06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixvvc"]
+size = Vector2(300, 896)
+
+[sub_resource type="Animation" id="Animation_d0iqa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wn71h"]
+resource_name = "die"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ueteg"]
+_data = {
+&"RESET": SubResource("Animation_d0iqa"),
+&"die": SubResource("Animation_wn71h")
+}
+
+[node name="Jack" type="Node2D" unique_id=57272201 node_paths=PackedStringArray("area_2d")]
+z_index = 2
+script = ExtResource("1_d0iqa")
+area_2d = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1909501025]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1707494638]
+shape = SubResource("RectangleShape2D_ixvvc")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=871638715]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1710404188]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_wef06")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals/Sprite2D" unique_id=2019555025]
+libraries/ = SubResource("AnimationLibrary_ueteg")
