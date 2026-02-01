@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c705leauov6jw" path="res://scripts/belch.gd" id="1_iecx2"]
 [ext_resource type="Texture2D" uid="uid://b17gpsgkyk2bh" path="res://art/enemy sprites/VentGhost_02.PNG" id="2_iecx2"]
 [ext_resource type="Texture2D" uid="uid://ugfhugd7bc2y" path="res://art/enemy sprites/VentGhost_03.PNG" id="3_g4elt"]
+[ext_resource type="AudioStream" uid="uid://cfpx818wqyqkt" path="res://audio/SFX/environment/Miasma Belch.wav" id="5_g4elt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nxonk"]
 animations = [{
@@ -85,6 +86,9 @@ libraries/ = SubResource("AnimationLibrary_nxonk")
 wait_time = 0.2
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=464484043]
+stream = ExtResource("5_g4elt")
 
 [connection signal="area_entered" from="BelchArea" to="." method="_on_belch_area_area_entered"]
 [connection signal="timeout" from="FizzleTimer" to="." method="_on_fizzle_timer_timeout"]

@@ -106,6 +106,9 @@ func _on_button_mouse_entered(button:TextureButton)-> void:
 	
 
 func _on_button_mouse_exited(button:TextureButton)-> void:
+	# Avoid error and menu change
+	if !$AudioStreamPlayer.is_inside_tree():
+		return
 	$AudioStreamPlayer.play(0.03)
 	button_scale_twen = create_tween()
 	button_scale_twen.tween_property(button,"scale",Vector2.ONE*1,0.4)\

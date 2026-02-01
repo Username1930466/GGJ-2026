@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://4ojwj1aw68ym"
-path="res://.godot/imported/Miasma Belch.wav-d6e88d70d23721cda34021a49587d54b.sample"
+uid="uid://be63ql8kiv02t"
+path="res://.godot/imported/Lamp.wav-0011800e61452497fb86054ab6c34653.sample"
 
 [deps]
 
-source_file="res://audio/Miasma Belch.wav"
-dest_files=["res://.godot/imported/Miasma Belch.wav-d6e88d70d23721cda34021a49587d54b.sample"]
+source_file="res://audio/SFX/player/Lamp.wav"
+dest_files=["res://.godot/imported/Lamp.wav-0011800e61452497fb86054ab6c34653.sample"]
 
 [params]
 

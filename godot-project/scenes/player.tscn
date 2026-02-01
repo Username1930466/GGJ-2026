@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dsiwdvsfjtbll" path="res://art/player sprites/PlagueWalk_05.PNG" id="4_d2wvv"]
 [ext_resource type="Texture2D" uid="uid://bsg3y62fj101l" path="res://art/player sprites/PlagueWalk_06.PNG" id="5_3v2ag"]
 [ext_resource type="Texture2D" uid="uid://dpugfal8i5vk8" path="res://art/player sprites/PlagueWalk_09.PNG" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dab41xhb4v61g" path="res://art/player sprites/PlagueDeath_01.PNG" id="6_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://dx4fc1802tgvd" path="res://art/player sprites/PlagueWalk_10.PNG" id="7_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://bhr2bwy6mcogg" path="res://art/player sprites/PlagueDash_02.PNG" id="10_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://divtg3kubh10m" path="res://art/player sprites/PlagueWalk_07.PNG" id="10_oprun"]
@@ -16,6 +17,8 @@
 [ext_resource type="Script" uid="uid://3hy6go8ox06n" path="res://scripts/player_ambient_sound.gd" id="13_f1ej7"]
 [ext_resource type="AudioStream" uid="uid://bol6rduwuxbb8" path="res://audio/SFX/player/Dash Whoosh.wav" id="14_a8ls1"]
 [ext_resource type="AudioStream" uid="uid://bn5hhp5qqbs1j" path="res://audio/SFX/player/Coughing.wav" id="14_oprun"]
+[ext_resource type="AudioStream" uid="uid://d0rrchjtn6jjh" path="res://audio/SFX/player/GameOver.wav" id="16_fulsm"]
+[ext_resource type="AudioStream" uid="uid://be63ql8kiv02t" path="res://audio/SFX/player/Lamp.wav" id="17_4r5pv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
@@ -39,6 +42,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"bear mask running",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qfm1y")
+}],
+"loop": true,
+"name": &"death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -237,6 +248,14 @@ libraries/ = SubResource("AnimationLibrary_oprun")
 
 [node name="DashSfx" type="AudioStreamPlayer" parent="." unique_id=1707088049]
 stream = ExtResource("14_a8ls1")
+volume_db = 5.0
+
+[node name="Death" type="AudioStreamPlayer" parent="." unique_id=291095423]
+stream = ExtResource("16_fulsm")
+volume_db = 5.0
+
+[node name="LanternSFX" type="AudioStreamPlayer" parent="." unique_id=387045515]
+stream = ExtResource("17_4r5pv")
 volume_db = 5.0
 
 [node name="PlayerAmbientSound" type="Timer" parent="." unique_id=34915363 node_paths=PackedStringArray("audio_stream_player")]

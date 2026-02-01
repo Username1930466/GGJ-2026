@@ -66,6 +66,7 @@ func _process(_delta: float) -> void:
 			if lantern_used == false:
 				lantern_used = true
 				lantern_animator.play("use_lantern")
+				$LanternSFX.play()
 			else:
 				lantern_used = false
 				lantern_animator.play("unuse_lantern")
@@ -115,6 +116,8 @@ func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
 	if !can_die:
 		return
 	alive = false
+	$Sprite.animation = "death"
+	$Death.play()
 	sprite.stop()
 	animation_player.stop()
 	player_died.emit()
