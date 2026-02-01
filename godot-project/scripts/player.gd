@@ -58,7 +58,6 @@ func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
 func SwitchMask(targetMask):
 	ResetMaskProperties(mask)
 	mask = targetMask
-	$DebugLabel.text = mask
 	mask_changed.emit(targetMask)
 	match mask:
 		
