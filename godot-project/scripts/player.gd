@@ -75,7 +75,7 @@ func SwitchMask(targetMask):
 			$Sprite.animation = "fox mask running"
 		
 		"reveal":
-			$Sprite.animation = "bear mask running"
+			$Sprite.animation = "bat mask running"
 
 func ResetMaskProperties(targetMask):
 	match targetMask:

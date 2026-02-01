@@ -113,6 +113,7 @@ _data = {
 [node name="Player" type="Node2D" unique_id=391822921]
 z_index = 5
 script = ExtResource("1_g2els")
+can_die = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=650881433]
 position = Vector2(0, -145)

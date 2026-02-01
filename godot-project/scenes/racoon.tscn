@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvg0uclyqrej7"]
 
 [ext_resource type="Script" uid="uid://204ftcmbn8kv" path="res://scripts/racoon.gd" id="1_ruweg"]
-[ext_resource type="Texture2D" uid="uid://dv330dj7fbk3r" path="res://icon.svg" id="2_ceuli"]
+[ext_resource type="Texture2D" uid="uid://djugmittxsph3" path="res://art/enemy sprites/TrashcanRaccoon_01.PNG" id="2_ruweg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xx78p"]
 size = Vector2(128, 896)
@@ -19,4 +19,6 @@ shape = SubResource("RectangleShape2D_xx78p")
 [node name="Visuals" type="Node2D" parent="." unique_id=1277753944]
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1194710266]
-texture = ExtResource("2_ceuli")
+position = Vector2(24.999998, -49.999996)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ruweg")

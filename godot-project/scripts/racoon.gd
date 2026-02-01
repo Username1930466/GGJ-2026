@@ -24,4 +24,5 @@ func _on_area_exited(other_area: Area2D) -> void:
 	print("Stopped colliding with: ", other_area.name)
 
 func _process(delta: float) -> void:
-	position.x -= 10
+	position.x -= 250 * delta
+	position.x = round(position.x)
