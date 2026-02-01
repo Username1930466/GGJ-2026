@@ -169,6 +169,7 @@ _data = {
 [node name="Player" type="Node2D" unique_id=391822921 node_paths=PackedStringArray("lantern", "lantern_animator")]
 z_index = 5
 script = ExtResource("1_g2els")
+can_die = true
 lantern = NodePath("Lantern")
 lantern_animator = NodePath("Lantern/AnimationPlayer")
 lantern_idle_pos = Vector2(-257, -108)
