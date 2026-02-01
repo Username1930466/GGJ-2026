@@ -19,8 +19,15 @@ var maskPropertyNode
 var targetX : float = startingX
 var alive:bool = true
 
+@export var lantern: Sprite2D
+@export var lantern_animator: AnimationPlayer
+@export var lantern_idle_pos: Vector2
+var lantern_used: bool = false
+
 func _ready() -> void:
 	$Sprite.play("no mask running")
+	lantern.visible = false
+	lantern.position = lantern_idle_pos
 	position.x = 200
 	position.y = 900
 
@@ -52,6 +59,15 @@ func _process(_delta: float) -> void:
 	if mask == "speed":
 		if Input.is_action_just_pressed("MaskAbility"):
 			$AnimationPlayer.play("dash")
+	
+	if mask == "reveal":
+		if Input.is_action_just_pressed("MaskAbility"):
+			if lantern_used == false:
+				lantern_used = true
+				lantern_animator.play("use_lantern")
+			else:
+				lantern_used = false
+				lantern_animator.play("unuse_lantern")
 
 func kill_player(cause_of_death:Global.WAYS_TO_DIE)-> void:
 	if !can_die:
@@ -82,6 +98,7 @@ func SwitchMask(targetMask):
 		
 		"reveal":
 			$Sprite.animation = "bat mask running"
+			lantern.visible = true
 
 func ResetMaskProperties(targetMask):
 	match targetMask:
@@ -96,7 +113,9 @@ func ResetMaskProperties(targetMask):
 			pass
 		
 		"reveal":
-			pass
+			lantern.visible = false
+			lantern.position = lantern_idle_pos
+			lantern_used = false
 	maskPropertyNode = null
 
 func Die(killer):
