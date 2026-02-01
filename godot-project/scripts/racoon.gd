@@ -18,7 +18,7 @@ func _on_area_entered(other_area: Area2D) -> void:
 		var player:Player = collider as Player
 		
 		# 50% chance to die to racoon
-		if randf() > 0:
+		if randf() > 0: #[TO-DO] set to 50/50?
 			player.kill_player(Global.WAYS_TO_DIE.CHECKPOINT)
 			sprite_2d.texture = racoon_pile_sprite
 			scale = Vector2.ONE * 2

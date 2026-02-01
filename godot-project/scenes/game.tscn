@@ -77,6 +77,7 @@ script = ExtResource("3_lnu2h")
 [node name="HUD" parent="." unique_id=1606327440 instance=ExtResource("4_lbhrr")]
 
 [node name="DeathPanel" parent="." unique_id=552984179 instance=ExtResource("8_gee14")]
+visible = false
 
 [connection signal="timeout" from="EnemySpawner/BatsTimer" to="EnemySpawner" method="_on_bats_timer_timeout"]
 [connection signal="timeout" from="EnemySpawner/RaccoonTimer" to="EnemySpawner" method="_on_raccoon_timer_timeout"]

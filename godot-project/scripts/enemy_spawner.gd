@@ -28,6 +28,7 @@ func _ready() -> void:
 	$SewerTimer.start()
 	#_on_army_timer_timeout.call_deferred()
 	#_on_raccoon_timer_timeout.call_deferred()
+	#_on_sewer_timer_timeout.call_deferred()
 
 func reset_timer(timer):
 	match timer.name:
@@ -37,6 +38,8 @@ func reset_timer(timer):
 		"SewerTimer": timer.wait_time = sewer_timer_avg + randf_range(-t_variation, t_variation)
 	
 	# theres probably a better way to do this but all i can think of is using arrays/dictionarys and i feel like that would be overcomplicating things
+
+
 
 func stop_all_timers()-> void:
 	$BatsTimer.stop()
@@ -76,4 +79,5 @@ func _on_sewer_timer_timeout() -> void:
 	var sewerInstance = sewerScene.instantiate()
 	get_parent().add_child(sewerInstance)
 	sewerInstance.position = Vector2(2500,900)
+	enemy_spawned.emit(sewerInstance)
 	reset_timer($SewerTimer)

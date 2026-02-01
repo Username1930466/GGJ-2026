@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://kwct21g744cj"]
 
+[ext_resource type="Script" uid="uid://n6hf7th36d5k" path="res://scripts/death_panel.gd" id="1_qmlx8"]
+
 [node name="DeathPanel" type="CanvasLayer" unique_id=552984179]
-visible = false
+script = ExtResource("1_qmlx8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=652677716]
 anchors_preset = 15
@@ -32,12 +34,14 @@ offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=1954471121]
+[node name="RetryButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=1954471121]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Retry
 "
 
-[node name="Button2" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=95532157]
+[node name="MainMenuButton" type="Button" parent="HBoxContainer/Panel/VBoxContainer" unique_id=95532157]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Main Menu"
 
