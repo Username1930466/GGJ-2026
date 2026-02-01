@@ -14,6 +14,8 @@ const bat_max_scale = 0.05
 const bat_min_anim_speed = 0.9
 const bat_max_anim_speed = 1.1
 
+const bat_attack_distance = 700
+
 var swarmAmount : int
 var batScene = preload("res://scenes/bat.tscn")
 var disperse = false
@@ -39,6 +41,9 @@ func _process(delta: float) -> void:
 			queue_free()
 	else:
 		position.x -= 10
+	
+	if abs(position.x - player.position.x) <= bat_attack_distance:
+		position.y = lerp(position.y, player.get_node("EyeHeight").global_position.y, 0.03)
 
 
 func Disperse():
@@ -46,3 +51,8 @@ func Disperse():
 	for child in get_children():
 		if child.name.begins_with("@AnimatedSprite") || child.name.begins_with("Bat"):
 			child.Disperse()
+
+
+func _on_swarm_area_area_entered(area: Area2D) -> void:
+	if area.name == "PlayerHitboxArea":
+		area.get_parent().Die("Bat")

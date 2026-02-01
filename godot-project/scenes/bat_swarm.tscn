@@ -13,3 +13,5 @@ script = ExtResource("1_shifv")
 
 [node name="SwarmCollision" type="CollisionShape2D" parent="SwarmArea" unique_id=1741138370]
 shape = SubResource("CircleShape2D_shifv")
+
+[connection signal="area_entered" from="SwarmArea" to="." method="_on_swarm_area_area_entered"]
