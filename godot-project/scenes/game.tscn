@@ -62,8 +62,9 @@ texture = ExtResource("3_p57ef")
 
 [node name="Player" parent="." unique_id=391822921 instance=ExtResource("2_lbhrr")]
 
-[node name="EnemySpawner" type="Node2D" parent="." unique_id=775510795]
+[node name="EnemySpawner" type="Node2D" parent="." unique_id=775510795 node_paths=PackedStringArray("floor_and_bg")]
 script = ExtResource("3_lnu2h")
+floor_and_bg = NodePath("../Floor & BG")
 
 [node name="BatsTimer" type="Timer" parent="EnemySpawner" unique_id=1556372327]
 

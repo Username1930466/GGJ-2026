@@ -9,6 +9,7 @@ func _ready() -> void:
 	else:
 		$AudioStreamPlayer2D.stream = sound2
 	$AudioStreamPlayer2D.playing = true
+	$FizzleAnim.play("Fizzle")
 
 func _on_belch_area_area_entered(area: Area2D) -> void:
 	if area.name == "PlayerHitboxArea":
