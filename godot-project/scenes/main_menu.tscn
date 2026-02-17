@@ -51,6 +51,21 @@ texture = ExtResource("2_oa1go")
 expand_mode = 2
 stretch_mode = 5
 
+[node name="Title" type="TextureRect" parent="." unique_id=1947560445]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -632.0
+offset_top = 128.00002
+offset_right = 431.97925
+offset_bottom = 327.3813
+grow_horizontal = 2
+scale = Vector2(1.088367, 1.088367)
+texture = ExtResource("8_tbmy8")
+expand_mode = 2
+stretch_mode = 5
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1881041814]
 layout_mode = 1
 anchors_preset = 15
@@ -197,7 +212,7 @@ Alvin Cash V - 2D Artist
 Anastasia Cook- Senior Artist
 Jarren Jennings - Coder
 Connor McCurry - Sound Designer, Composer
-Kesler ??? - Coder
+Kesler Ratke - Coder
 Fory Schavey - Producer / Design
 Raiden Schavey - Coder
 
@@ -296,11 +311,7 @@ text = "0"
 fit_content = true
 autowrap_mode = 0
 
-[node name="MasqueraidTitle" type="Sprite2D" parent="." unique_id=281293573]
-position = Vector2(960, 250)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_tbmy8")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1029641791]
 stream = ExtResource("9_jk1qb")
-volume_db = 1.0
+volume_db = -3.0
+pitch_scale = 3.0

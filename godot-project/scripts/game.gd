@@ -46,7 +46,6 @@ func _on_player_died()-> void:
 	var is_high_score:bool = check_for_high_score()
 	death_panel.show_pannel(is_high_score,current_score)
 	
-	Global.game_ended.emit()
 	stop_movement.emit()
 	#get_tree().change_scene_to_file.call_deferred("res://scenes/main_menu.tscn")
 

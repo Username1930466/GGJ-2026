@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcoq6j4skk831"]
 
 [ext_resource type="Script" uid="uid://b5uxvliuj6ov6" path="res://scripts/bat_swarm.gd" id="1_shifv"]
+[ext_resource type="AudioStream" uid="uid://ch0suabw10ar7" path="res://audio/Bat Swarm.wav" id="2_b5r8d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_shifv"]
 radius = 107.11676
@@ -13,5 +14,9 @@ script = ExtResource("1_shifv")
 
 [node name="SwarmCollision" type="CollisionShape2D" parent="SwarmArea" unique_id=1741138370]
 shape = SubResource("CircleShape2D_shifv")
+
+[node name="Audio_batswarm" type="AudioStreamPlayer" parent="." unique_id=2096104912]
+stream = ExtResource("2_b5r8d")
+autoplay = true
 
 [connection signal="area_entered" from="SwarmArea" to="." method="_on_swarm_area_area_entered"]

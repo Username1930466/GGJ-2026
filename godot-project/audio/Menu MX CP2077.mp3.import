@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qpk5qk82piwo"
+path="res://.godot/imported/Menu MX CP2077.mp3-a68b417571298260599a43cfe5ce3e07.mp3str"
+
+[deps]
+
+source_file="res://audio/Menu MX CP2077.mp3"
+dest_files=["res://.godot/imported/Menu MX CP2077.mp3-a68b417571298260599a43cfe5ce3e07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

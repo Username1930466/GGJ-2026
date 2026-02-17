@@ -33,7 +33,7 @@ func _ready() -> void:
 	$ArmyTimer.start()
 	$SewerTimer.start()
 	#_on_army_timer_timeout.call_deferred()
-	#_on_raccoon_timer_timeout.call_deferred()
+	_on_raccoon_timer_timeout.call_deferred()
 	#_on_sewer_timer_timeout.call_deferred()
 	#_on_bats_timer_timeout.call_deferred()
 
