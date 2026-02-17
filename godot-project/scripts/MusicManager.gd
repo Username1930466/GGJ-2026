@@ -10,6 +10,7 @@ var fade_tween:Tween
 func _ready() -> void:
 	Global.game_started.connect(_on_game_started)
 	Global.game_ended.connect(_on_game_ended)
+	Global.game_restarted.connect(_on_game_restarted)
 
 
 # Connects to Global.game_started signal
@@ -19,6 +20,9 @@ func _on_game_started()-> void:
 	audio_stream_player.stream = game_track
 	audio_stream_player.play()
 	audio_fade_in(0)
+	
+func _on_game_restarted()-> void:
+	audio_stream_player.play()
 
 # Connects to Global.game_ended signal
 func _on_game_ended()-> void:

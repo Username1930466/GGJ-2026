@@ -47,6 +47,8 @@ func set_score(value:int)-> void:
 
 func _on_retry_pressed()-> void:
 	get_tree().reload_current_scene()
+	Global.game_restarted.emit()
 
 func _on_menu_pressed()-> void:
+	Global.game_ended.emit()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

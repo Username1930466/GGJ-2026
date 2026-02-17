@@ -24,7 +24,7 @@ func _on_area_entered(other_area: Area2D) -> void:
 			scale = Vector2.ONE * 2
 			position.x -= 200
 			position.y += 100
-			audio_stream_player.play()
+			audio_stream_player.play(2)
 			
 	elif collider is CandyBar:
 		queue_free()
