@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cdpkcx2qeh1vh" path="res://scenes/building.tscn" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://m77l7mr0yh54" path="res://scenes/hud.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://kwct21g744cj" path="res://scenes/death_panel.tscn" id="8_gee14"]
-[ext_resource type="AudioStream" uid="uid://bn32jiurofi5e" path="res://audio/Ambience (wind, street, coughing).wav" id="9_0tnpc"]
+[ext_resource type="AudioStream" uid="uid://cen12ves0lmv" path="res://audio/Ambience.wav" id="9_0tnpc"]
 
 [node name="Game" type="Node2D" unique_id=2128105295 node_paths=PackedStringArray("hud", "player")]
 script = ExtResource("1_iywne")
